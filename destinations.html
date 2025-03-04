@@ -1,0 +1,2717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mafoy africa Safaris | Luxury Safari Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+        }
+
+        /* Specific styling for the first page (hidden by default) */
+        .zoomed {
+            zoom: 0.67; /* Apply 67% zoom */
+        }
+
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* White text */
+    background-color: #d99d42; /* Golden orange background for the header */
+    width: 100%; /* Ensure the golden orange color covers the entire width */
+    position: relative; /* Positioning for menu button inside header */
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    color: #ffffff; /* White text for logo */
+    background-color: #d99d42; /* Golden orange background for logo */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute; /* Position absolutely inside the header */
+    right: 20px; /* Align the button to the right inside the header */
+    background-color: transparent; /* No background for the button itself */
+    padding: 10px; /* Add padding to make button area clickable */
+}
+
+.menu-btn div {
+    width: 30px;
+    height: 4px;
+    background-color: #ffffff; /* White color for mobile menu lines */
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.mobile-nav.active {
+    display: flex;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+.mobile-nav ul li {
+    width: 100%;
+}
+
+.mobile-nav ul li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333; /* Dark text color */
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.mobile-nav ul li a:hover {
+    background-color: #f4f4f4;
+    color: #b96329; /* Burnt orange color on hover */
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+    header {
+        padding: 10px 5%;
+        display: flex;
+        justify-content: space-between; /* Align logo and menu at opposite ends */
+        align-items: center;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    /* Hide Menu Text in desktop view */
+    .menu-text {
+        display: none;
+    }
+
+    /* Align the navigation to the right */
+    header nav {
+        margin-left: auto; /* Push navigation to the right */
+    }
+
+    header nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+
+    header nav ul li {
+        position: relative;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: #ffffff; /* White text for navigation items */
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+
+    header nav ul li a:hover {
+        color: #b96329; /* Burnt orange color on hover */
+    }
+
+    /* Dropdown Styling */
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        min-width: 200px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    /* Show the dropdown when hovering over the parent */
+    header nav ul li:hover .dropdown {
+        display: block;
+    }
+
+    .dropdown li {
+        width: 100%;
+    }
+
+    .dropdown a {
+        display: block;
+        padding: 10px 15px;
+        color: #333;
+    }
+
+    .dropdown a:hover {
+        background-color: #f4f4f4;
+    }
+
+    /* Update logo background to golden orange for desktop view */
+    .logo {
+        background-color: #d99d42; /* Golden orange background for logo on desktop */
+        color: white; /* White text color for logo text */
+    }
+
+    .logo img {
+        width: 50px; /* Adjust logo size */
+        margin-right: 10px;
+    }
+
+    .logo span {
+        font-size: 1.6rem; /* Increase font size for better visibility */
+        font-weight: bold;
+    }
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 768px) {
+    /* Make the entire header section golden orange on mobile */
+    header {
+        display: block;
+        padding: 0; /* Remove default padding */
+        background-color: #d99d42; /* Golden orange background for the entire header */
+        width: 100%; /* Make the golden orange background cover the entire width */
+    }
+
+    /* Logo on top of the header in mobile view with full-width golden orange background */
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Full-width */
+        background-color: #ffffff; /* White background for logo part */
+        padding: 30px 0; /* Increased padding for larger header */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    }
+
+    .logo img {
+        width: 60px; /* Adjust logo size */
+        margin-right: 10px;
+    }
+
+    .logo span {
+        font-size: 1.6rem; /* Increase font size for better visibility */
+        font-weight: bold;
+        color: #333; /* Dark text color for logo in mobile view */
+    }
+
+    /* Header section with mobile menu icon */
+    header nav {
+        display: none; /* Hidden by default */
+    }
+
+    /* Mobile Navigation visible when active */
+    .mobile-nav.active {
+        display: flex;
+    }
+
+    /* "Menu" Text */
+    .menu-text {
+        color: white;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    /* Dropdown menu visibility when "Tours" is clicked */
+    .mobile-nav ul li .dropdown {
+        display: none;
+    }
+
+    .mobile-nav ul li.active .dropdown {
+        display: block;
+    }
+}
+
+
+/* Google Translate */
+body {
+    margin: 0;
+    padding: 20px; /* Added for visibility */
+}
+
+/* Make sure button is visible */
+#translateBtn {
+    background-color: #4285f4 !important;
+    color: white !important;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex !important; /* Force display */
+    align-items: center;
+    position: relative; /* Ensure z-index works */
+    z-index: 9999; /* Keep above other elements */
+}
+
+/* Google Translate Element Hiding */
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+.goog-te-combo {
+    opacity: 0; /* Hide original dropdown */
+    position: absolute;
+    left: -9999px;
+}
+
+/* Load Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <!-- Logo (Visible in both mobile and desktop but different positioning) -->
+        <div class="logo">
+            <img src="mafoy2.jpg.png" alt="Mafoy africa Safaris">
+            <span>Mafoy africa Safaris</span>
+        </div>
+
+        
+        <!-- Google Translate -->
+        <button id="translateBtn">
+            <span style="margin-right: 8px">🌐</span> <!-- Fallback emoji -->
+            Translate
+        </button>
+    
+        <!-- Google Translate Container -->
+        <div id="google_translate_element"></div>
+    
+        <script>
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: 'en,sw,fr,es,de,it,pt,ru,zh-CN,ja',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+    
+                // Click handler with error checking
+                const translateButton = document.getElementById('translateBtn');
+                if (translateButton) {
+                    translateButton.addEventListener('click', () => {
+                        const googleDropdown = document.querySelector('.goog-te-combo');
+                        if (googleDropdown) {
+                            googleDropdown.dispatchEvent(new Event('mousedown'));
+                        }
+                    });
+                }
+            }
+        </script>
+         <!-- Google Translate Script with Error Handling -->
+         <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+        <!-- Mobile Menu Button and "Menu" Text -->
+        <div class="menu-btn" onclick="toggleMobileMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <span class="menu-text">Menu</span> <!-- Menu Text added here -->
+
+        <!-- Desktop Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li class="tour-item">
+                    <a href="tours.html" onclick="toggleDropdown(event)">Tours</a>
+                    <ul class="dropdown">
+                        <li><a href="day-trips.html">Day Trip Packages</a></li>
+                        <li><a href="budget-tours.html">Budget Tour Packages</a></li>
+                        <li><a href="midrange-tours.html">Midrange Tour Packages</a></li>
+                        <li><a href="luxury-tours.html">Luxury Tour Packages</a></li>
+                        <li><a href="hiking.html">Hiking Packages</a></li>
+                        <li><a href="zanzibar-holidays.html">Zanzibar Holidays Packages</a></li>
+                    </ul>
+                </li>
+                <li><a href="about_us.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li class="tour-item">
+                <a href="tours.html" onclick="toggleDropdown(event)">Tours</a>
+                <ul class="dropdown">
+                    <li><a href="day-trips.html">Day Trip Packages</a></li>
+                    <li><a href="budget-tours.html">Budget Tour Packages</a></li>
+                    <li><a href="midrange-tours.html">Midrange Tour Packages</a></li>
+                    <li><a href="luxury-tours.html">Luxury Tour Packages</a></li>
+                    <li><a href="hiking.html">Hiking Packages</a></li>
+                    <li><a href="zanzibar-holidays.html">Zanzibar Holidays Packages</a></li>
+                </ul>
+            </li>
+            <li><a href="about us.html">About us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            document.querySelector('.mobile-nav').classList.toggle('active');
+        }
+
+        // Toggle Dropdown for "Tours"
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const parentLi = event.target.parentElement;
+            parentLi.classList.toggle('active');
+        }
+    </script>
+
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+            zoom: 0.67; /* Sets the zoom level to 75% */
+
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 0px;
+            /* Reduced top margin */
+            padding: 1rem;
+            /* Reduced padding */
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        /* Safari Packages Grid */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* Exactly 4 columns on desktop */
+            gap: 1.5rem;
+            /* Reduced gap between items */
+            width: 100%;
+            margin-top: 1.5rem;
+            /* Reduced margin-top */
+            justify-items: stretch;
+        }
+
+        /* Package Card */
+        .package-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            opacity: 0;
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Package Image */
+        .package-image {
+            width: 100%;
+            height: 180px;
+            /* Adjusted height for better spacing */
+            object-fit: cover;
+            /* Ensure the image covers the container without stretching */
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .package-card:hover .package-image {
+            transform: scale(1.05);
+            opacity: 0.8;
+        }
+
+        .package-content {
+            padding: 1rem;
+            /* Reduced padding */
+        }
+
+        .package-title {
+            font-size: 1.4rem;
+            /* Slightly smaller font size */
+            color: #2c3e50;
+            margin-bottom: 0.3rem;
+            /* Reduced bottom margin */
+            opacity: 0;
+            animation: fadeInUp 1s 0.2s forwards;
+        }
+
+        /* Responsive Font Size Adjustments */
+        @media (max-width: 1200px) {
+            .package-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .package-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .package-title {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .package-title {
+                font-size: 1rem;
+            }
+        }
+
+        .package-details {
+            margin-bottom: 0.5rem;
+            /* Reduced margin-bottom */
+            color: #666;
+            opacity: 0;
+            animation: fadeInUp 1s 0.4s forwards;
+        }
+
+        .package-price {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            /* Reduced font size */
+            margin-bottom: 0.8rem;
+            /* Reduced margin-bottom */
+            opacity: 0;
+            animation: fadeInUp 1s 0.6s forwards;
+        }
+
+        .view-details-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem; /* Adjusted padding */
+    background-color: #d99d42; /* Golden orange */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.view-details-btn:hover {
+    background-color: #b96329; /* Slightly darker golden orange for hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+        }
+
+        .modal.active {
+            display: block;
+            animation: fadeInModal 0.5s forwards;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            width: 100%;
+            max-width: 1000px;
+            margin: 2rem auto;
+            border-radius: 12px;
+            max-height: 90vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+
+        .modal-header {
+            padding: 1rem;
+            /* Reduced padding */
+            background-color: #3498db;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+            font-size: 1.4rem;
+            /* Slightly smaller font size */
+            color: #fff;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #fff;
+            padding: 0.5rem;
+        }
+
+        .close-modal:hover {
+            color: #f8f9fa;
+        }
+
+        .modal-body {
+            display: flex;
+            height: calc(100vh - 140px);
+            opacity: 0;
+            animation: fadeInUp 1s 0.3s forwards;
+        }
+
+        .modal-sidebar {
+            width: 250px;
+            background-color: #f8f9fa;
+            border-right: 1px solid #dee2e6;
+            padding: 1rem;
+            overflow-y: auto;
+        }
+
+        .modal-nav {
+            list-style: none;
+        }
+
+        .modal-nav-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-nav-link {
+            display: block;
+            padding: 0.8rem 1rem;
+            color: #666;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .modal-nav-link:hover,
+        .modal-nav-link.active {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        .modal-main {
+            flex: 1;
+            padding: 1rem;
+            /* Reduced padding */
+            overflow-y: auto;
+        }
+
+       .tab-content {
+    display: none; /* Initially hidden */
+    padding: 20px; /* Padding for spacing inside the container */
+    background-color: #ffffff; /* Clean white background for maximum contrast */
+    border: 1px solid #dcdcdc; /* Subtle border for structure */
+    border-radius: 8px; /* Smooth rounded corners */
+    font-size: 18px; /* Larger font size for readability */
+    line-height: 1.8; /* Comfortable line spacing */
+    color: #1a1a1a; /* Very dark gray text for excellent contrast */
+    text-align: justify; /* Ensure text fills the width evenly */
+    word-wrap: break-word; /* Prevent long words from breaking the layout */
+    width: 100%; /* Ensure the content spans the full width of the container */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Display content when active */
+.tab-content.active {
+    display: block; /* Show content */
+    animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Styling for itinerary headings */
+.itinerary-day h4 {
+    font-size: 1.4rem; /* Professional and legible font size */
+    color: #004080; /* Deep blue color for a clean and modern look */
+    margin-bottom: 0.5rem; /* Space below heading for separation */
+    font-weight: 600; /* Slightly bold for emphasis */
+    text-transform: uppercase; /* Uppercase for a structured appearance */
+}
+
+/* Fade-in animation for smooth transitions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adjustments for larger desktop screens */
+@media (min-width: 1024px) {
+    .tab-content {
+        font-size: 20px; /* Slightly larger text for desktop */
+        padding: 25px; /* More padding for a spacious look */
+        line-height: 2; /* Increase line spacing for better readability */
+    }
+    .itinerary-day h4 {
+        font-size: 1.6rem; /* Slightly larger heading size for desktop */
+    }
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 768px) {
+    .tab-content {
+        font-size: 16px; /* Slightly smaller font for mobile */
+        padding: 15px; /* Compact padding for smaller screens */
+    }
+    .itinerary-day h4 {
+        font-size: 1.2rem; /* Adjust heading size for smaller screens */
+    }
+}
+
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-content img {
+            width: 100% !important;
+            height: 50px !important;
+            object-fit: cover !important;
+            border-radius: 0px;
+            margin-bottom: 0rem;
+            animation: fadeInImage 1s ease-in-out;
+            height: fit-content;
+        }
+
+        .back-to-packages {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #1471cd;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s ease;
+            height: fit-content;
+        }
+
+        .back-to-packages:hover {
+            background-color: #34495e;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInModal {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInImage {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .packages-grid {
+                grid-template-columns: repeat(3, 1fr);
+                /* 3 columns for medium screens */
+            }
+        }
+
+        @media (max-width: 992px) {
+            .packages-grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 columns for tablet */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 1rem;
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+                /* Single column for mobile */
+            }
+
+            .package-card {
+                margin-bottom: 1rem;
+            }
+
+            .package-image {
+                height: 150px;
+                /* Resize image for mobile */
+            }
+
+            .modal-body {
+                flex-direction: column;
+            }
+
+            .modal-sidebar {
+                width: 100%;
+                max-height: fit-content;
+                border-right: none;
+                border-bottom: 1px solid #dee2e6;
+            }
+
+            .modal-nav {
+                display: flex;
+                overflow-x: auto;
+                padding-bottom: 0.5rem;
+                gap: 0rem;
+                min-height: fit-content;
+            }
+
+            .modal-nav-item {
+                flex: 0 0 auto;
+                margin-bottom: 0;
+            }
+
+            .modal-nav-link {
+                white-space: nowrap;
+                padding: 0.5rem 1rem;
+            }
+
+            .modal-main {
+                height: calc(90vh - 250px);
+            }
+
+            .nav-menu {
+                display: none;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .package-card {
+                margin-bottom: 1rem;
+            }
+
+            .modal-content {
+                width: 100%;
+                margin: 0rem auto;
+            }
+
+            .modal-header {
+                padding: 0rem;
+            }
+
+            .modal-title {
+                font-size: 0.2rem;
+            }
+
+            h1 {
+                font-size: 0.0rem;
+            }
+        }
+        h1 {
+    font-size: 2rem; /* Adjust for mobile */
+}
+
+
+        /* Modal Full-Screen View */
+        .modal {
+            
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Slightly darker overlay for emphasis */
+            overflow: auto;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .modal-content {
+            margin: auto;
+            background-color: #fff;
+            border-radius: 10px;
+            width: 160%;
+            width: max-content;
+           width: auto;
+            /* Larger maximum width */
+            height: 50%;
+            /* Take up more screen height */
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            /* Deeper shadow for more prominence */
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.0rem rem;
+            background-color: hwb(210 16% 0%);
+            /* Darker blue for contrast */
+            color: #fff;
+            font-size: 4rem;
+            /* Larger font size */
+            font-weight: bold;
+    
+        }
+
+        General Style for .modal */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 10vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    overflow: hidden; /* Prevent scrolling */
+    overflow: visible;
+}
+
+/* General Style for .modal-content */
+.modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1600px; /* Larger maximum width for desktops */
+    height: auto; /* Default height */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Ensures padding/border are included in dimensions */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Shadow for prominence */
+}
+
+/* Mobile View (Small Screens) */
+@media (max-width: 768px) {
+    .modal {
+        padding: 0; /* Remove any internal padding */
+    }
+
+    .modal-content {
+        width: 100vw;      /* Full viewport width */
+        height: 100vh;     /* Full viewport height */
+        border-radius: 0;  /* Remove rounded corners */
+        margin: 0;         /* Remove margins */
+        padding: 0;        /* Remove padding */
+        box-shadow: none;  /* Remove shadow for fullscreen */
+    }
+}
+
+/* Disable body scrolling when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal-sidebar {
+    flex: 0 0 25%; /* Reduced width for a sleek, modern look */
+    background: linear-gradient(135deg, #ffffff, #f8f9fa); /* Minimalist soft gradient */
+    padding: 1rem; /* Balanced padding */
+    overflow-y: auto;
+    border-right: 1px solid #e5e5e5; /* Subtle border for separation */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft shadow for a floating effect */
+    border-radius: 12px; /* Rounded corners for a modern aesthetic */
+    color: #2b2b2b; /* Neutral dark text color */
+    font-family: 'Inter', sans-serif; /* Clean and modern font */
+    font-size: 0.95rem; /* Comfortable font size */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Sidebar Navigation Styles */
+.modal-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-nav-item {
+    margin-bottom: 0.8rem; /* Clean spacing between items */
+}
+.modal-nav-link {
+    display: block;
+    padding: 0.8rem 1rem; /* Balanced padding for a clean look */
+    text-decoration: none;
+    color: #ffffff; /* White text for contrast */
+    background-color: hsl(42, 100%, 50%); /* Golden yellow background */
+    border: 1px solid hsl(42, 100%, 40%); /* Slightly darker golden yellow border */
+    border-radius: 8px; /* Modern rounded corners */
+    font-weight: 500; /* Medium font weight for clarity */
+    box-shadow: 0 2px 4px rgba(255, 195, 77, 0.2); /* Subtle golden yellow shadow */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    font-size: 0.9rem; /* Sleek, slightly smaller text */
+}
+
+.modal-nav-link:hover {
+    background: linear-gradient(135deg, hsl(42, 100%, 40%), hsl(42, 100%, 50%)); /* Gradient golden yellow hover effect */
+    color: #FFFFFF; /* Keep text white on hover */
+    border-color: hsl(42, 100%, 30%); /* Slightly deeper golden yellow border for hover */
+    box-shadow: 0 4px 8px rgba(255, 180, 0, 0.3); /* Enhanced shadow on hover */
+    transform: translateY(-3px); /* Lift effect */
+}
+
+.modal-nav-link.active {
+    background: linear-gradient(135deg, hsl(42, 100%, 30%), hsl(42, 100%, 40%)); /* Deep gradient for active link */
+    color: #FFFFFF; /* White text for active state */
+    font-weight: 600; /* Slightly bolder for emphasis */
+    box-shadow: 0 6px 12px rgba(255, 160, 0, 0.4); /* Prominent golden yellow shadow for active state */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-sidebar {
+        flex: 0 0 100%; /* Full width for mobile */
+        padding: 0.8rem; /* Adjusted padding for smaller screens */
+        background: linear-gradient(135deg, #f9f9f9, #ffffff); /* Subtle gradient for mobile */
+        box-shadow: none; /* Flat design for mobile */
+        border-radius: 0; /* No rounding for seamless stacking */
+    }
+
+    .modal-nav-item {
+        margin-bottom: 1.5rem; /* Compact spacing for mobile */
+    }
+
+    .modal-nav-link {
+        padding: 0.6rem 0.8rem; /* Compact padding */
+        font-size: 0.85rem; /* Slightly smaller text */
+    }
+
+    .modal-nav-link:hover {
+        transform: translateY(-2px); /* Subtle lift effect for mobile */
+    }
+}
+
+        .modal-main {
+            flex: 1;
+            padding: 0.5rem;
+            overflow-y: auto;
+            font-size: 1.2rem;
+            /* Slightly larger text for better readability */
+        }
+
+        .modal-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .modal-nav-item {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Base styles (applies to all screen sizes) */
+.modal-nav-link {
+    display: block;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: #333;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    font-size: 1rem; /* Larger font size */
+    transition: background-color 0.3s;
+}
+
+/* Mobile-specific styles (screen width up to 768px) */
+@media (max-width: 768px) {
+    .modal-nav-link {
+        font-size: 0.9rem; /* Slightly smaller font size */
+        padding: 0.8rem 1.2rem; /* Adjusted padding for smaller screens */
+    }
+}
+
+/* Desktop-specific styles (screen width 769px and above) */
+@media (min-width: 769px) {
+    .modal-nav-link {
+        font-size: 1.2rem; /* Larger font size for desktop */
+        padding: 1.2rem 2rem; /* More spacious padding */
+    }
+}
+
+        .modal-nav-link.active {
+            background-color: #a19725;
+            color: #fff;
+        }
+
+        .modal-nav-link:hover {
+            background-color: #89b2dc;
+            color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+/* General Style for .tab-image */
+.tab-image {
+    border-radius: 5px;
+    margin-bottom: 4rem;
+    object-fit: cover;
+    object-position: 0cqmax;
+}
+
+/* Desktop View (Large Screens) */
+@media (min-width: 992px) {
+    .tab-image {
+        max-height: 900px; /* Larger image for desktops */
+    }
+}
+
+/* Mobile View (Small Screens) */
+@media (max-width: 768px) {
+    .tab-image {
+        max-height: 200px; /* Smaller image for mobile */
+    }
+}
+
+        .close-modal {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            /* Larger close button */
+            cursor: pointer;
+        }
+
+        .itinerary-day {
+            margin-bottom: rem;
+        }
+
+        .itinerary-day h4 {
+            font-size: 1.4rem;
+            /* Larger day title */
+            color: #004080;
+            margin-bottom: 0.5rem;
+        }
+
+        .itinerary-day p {
+            font-size: 1.3rem;
+            /* Larger description text */
+        }
+
+        .itinerary-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 0rem;
+            border-radius: 10px;
+        }
+
+ 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .back-to-packages {
+        font-size: 1.2rem; /* Smaller font size on mobile */
+        padding: 0.8rem 1.5rem; /* Adjust padding for mobile */
+        margin-top: 1.5rem; /* Adjust top margin on mobile */
+        margin-bottom: 1.5rem; /* Adjust bottom margin on mobile */
+    }
+}
+h1 {
+  font-size: 2rem; /* Default size */
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem; /* Smaller size for mobile */
+  }
+}
+</style>    
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        .main-content {
+            width: 100%;
+            max-width: 100%;
+            padding:1rem;
+            margin-top: auto;
+        }
+
+        h1 {
+            color: #d99d42 !important;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            width: 100%;
+            padding: 0 2rem;
+        }
+
+        .package-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            height: 370px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            width: 95%;
+        }
+
+        .package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .package-image-container {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .package-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .package-card:hover .package-image {
+            transform: scale(1.05);
+        }
+
+        .package-overlay {
+            padding: 10px 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.4), transparent);
+            color: white;
+            flex-grow: 1;
+            margin-top: -10px;
+        }
+
+        .package-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.2rem;
+            color: #1a2a3b;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .view-details-btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #d99d42;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            margin-top: 1rem;
+            text-align: center;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .view-details-btn:hover {
+            background-color: #b96329;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design for Small Screens */
+        @media (max-width: 576px) {
+            .packages-grid {
+                grid-template-columns: 1fr; /* Single column layout */
+                gap: 10px; /* Slight gap for better separation */
+                padding: 10px; /* Add slight padding for better aesthetics */
+            }
+
+            .main-content {
+                padding: 10px; /* Add consistent padding for main content */
+                border-radius: 0; /* Remove border radius for a clean layout */
+            }
+
+            .package-card {
+                height: 320px; /* Slightly taller for a balanced look */
+                width: 100%; /* Full width for cards */
+                margin: 0 0 10px 0; /* Add bottom margin for better spacing */
+                border-radius: 10px; /* Slightly rounded corners for a modern look */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for an elevated look */
+                overflow: hidden; /* Ensure content fits within the fixed height */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between; /* Evenly distribute content */
+            }
+
+            .package-title {
+                font-size: 1.2rem; /* Optimized title size for readability */
+                font-weight: bold; /* Add emphasis to the title */
+                text-align: center; /* Center-align for better focus */
+                margin: 4px 0; /* Add spacing around the title */
+            }
+
+            .view-details-btn {
+                font-size: 1rem; /* Professional font size */
+                padding: 10px 20px; /* Balanced padding for a better click area */
+                background-color: #FFA500; /* Golden orange background */
+                color: #fff; /* White text for contrast */
+                border: none; /* Clean design without borders */
+                border-radius: 5px; /* Rounded corners for a modern look */
+                text-align: center; /* Center-align text */
+                text-transform: uppercase; /* Use uppercase for a professional touch */
+                font-weight: bold; /* Bold text for emphasis */
+                cursor: pointer; /* Pointer cursor for interactivity */
+                transition: all 0.3s ease; /* Smooth transition for hover effects */
+                display: inline-block; /* Flexible inline display */
+                margin: 0 auto; /* Center-align button */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            }
+
+            .view-details-btn:hover {
+                background-color: #FF8C00; /* Darker golden orange on hover */
+                transform: scale(1.05); /* Slightly enlarge for interactivity */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Enhance shadow for hover effect */
+            }
+        }
+    </style>
+    <main class="main-content">
+        <h1>POPULAR DESTINATIONS</h1>
+        <div class="packages-grid">
+            <!-- Package Card 1 -->
+            <div class="package-card">
+                <div class="package-image-container">
+                    <img src="hyena.jpg" alt="Safari Tour" class="package-image">
+                </div>
+                <div class="package-overlay">
+                    <h2 class="package-title">SERENGETI NATIONAL PARK</h2>
+                    <a href="#" class="view-details-btn" data-package="TOUR1">View Details</a>
+                </div>
+            </div>
+
+            <!-- Package Card 2 -->
+            <div class="package-card">
+                <div class="package-image-container">
+                    <img src="lion.jpg" alt="Northern Circuit" class="package-image">
+                </div>
+                <div class="package-overlay">
+                    <h2 class="package-title">NGORONGORO CRATER</h2>
+                    <a href="#" class="view-details-btn" data-package="TOUR2">View Details</a>
+                </div>
+            </div>
+
+            <!-- Package Card 3 -->
+            <div class="package-card">
+                <div class="package-image-container">
+                    <img src="zebra2.jpg" alt="Tanzania Safari" class="package-image">
+                </div>
+                <div class="package-overlay">
+                    <h2 class="package-title">TARANGIRE NATIONAL PARK</h2>
+                    <a href="#" class="view-details-btn" data-package="TOUR3">View Details</a>
+                </div>
+            </div>
+
+            <!-- Package Card 4 -->
+            <div class="package-card">
+                <div class="package-image-container">
+                    <img src="leopard.jpg" alt="Adventure Safari" class="package-image">
+                </div>
+                <div class="package-overlay">
+                    <h2 class="package-title">MANYARA NATIONAL PARK</h2>
+                    <a href="#" class="view-details-btn" data-package="TOUR4">View Details</a>
+                </div>
+            </div>
+
+            <!-- Package Card 5 -->
+            <div class="package-card">
+                <div class="package-image-container">
+                    <img src="elephant.jpg" alt="Safari Tour" class="package-image">
+                </div>
+                <div class="package-overlay">
+                    <h2 class="package-title">RUAHA NATIONAL PARK</h2>
+                    <a href="#" class="view-details-btn" data-package="TOUR5">View Details</a>
+                </div>
+            </div>
+
+            <!-- Package Card 6 -->
+            <div class="package-card">
+                <div class="package-image-container">
+                    <img src="girrafe.jpg" alt="Luxury Safari" class="package-image">
+                </div>
+                <div class="package-overlay">
+                    <h2 class="package-title">MIKUMI NATIONAL PARK</h2>
+                    <a href="#" class="view-details-btn" data-package="TOUR6">View Details</a>
+                </div>
+            </div>
+
+            <!-- Package Card 7 -->
+            <div class="package-card">
+                <div class="package-image-container">
+                    <img src="mbogo.jpg" alt="Exclusive Safari" class="package-image">
+                </div>
+                <div class="package-overlay">
+                    <h2 class="package-title">ARUSHA NATIONAL PARK</h2>
+                    <a href="#" class="view-details-btn" data-package="TOUR7">View Details</a>
+                </div>
+            </div>
+
+            <!-- Package Card 8 -->
+            <div class="package-card">
+                <div class="package-image-container">
+                    <img src="beach3.jpg" alt="Adventure Safari" class="package-image">
+                </div>
+                <div class="package-overlay">
+                    <h2 class="package-title">ZANZIBAR</h2>
+                    <a href="#" class="view-details-btn" data-package="TOUR8">View Details</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+        <style>/* Base Modal Styles */
+            .modal {
+                display: none;
+                position: fixed;
+                margin-top: auto;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(197, 184, 141, 0.838);
+                z-index: 1000;
+            }
+            
+            .modal-content {
+                position: relative;
+                background-color: #fff;
+                margin: 0.2% auto;
+                padding: 50px;
+                width: 99%;
+                max-width: 1800px;
+                max-height: 99vh;
+                overflow-y: auto;
+                border-radius: 12px;
+            }
+            
+            /* Header Styles */
+            .modal-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+                padding: 10px 20px;
+                background-color: #FFA500; /* Orange header */
+                border-radius: 8px;
+            }
+            
+            .modal-title {
+                margin: 0;
+                font-size: 36px;
+                font-weight: bold;
+                color: #ffffff;
+            }
+            
+            /* Home Link Button */
+            .home-link {
+                font-size: 16px;
+                text-decoration: none;
+                color: #ffffff;
+                font-weight: 600;
+                padding: 12px 24px;
+                background-color: #DAA520; /* Golden orange */
+                border-radius: 8px;
+                border: 2px solid #B8860B;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                display: inline-block;
+                text-align: center;
+                cursor: pointer;
+            }
+            
+            .home-link:hover {
+                background-color: #b8860b;
+                color: #ffffff;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 10px #002b36(0, 0, 0, 0.2);
+                text-decoration: underline;
+            }
+            
+            /* Modal Body */
+            .modal-body {
+                display: flex;
+                gap: 40px;
+                overflow: auto;
+            }
+            
+            .modal-sidebar {
+                flex: 0 0 300px;
+            }
+            
+            .modal-main {
+                flex: 1;
+            }
+            
+            /* Navigation Items */
+            .modal-nav-item {
+                margin-bottom: 20px;
+                background-color: #d8cfc0; /* Light golden background */
+                border-radius: 6px;
+                transition: all 0.3s ease;
+            }
+            
+            .modal-nav-link {
+                display: block;
+                padding: 15px 25px;
+                font-size: 18px;
+                color:#002b36;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                background-color:  #f4f0e8; 
+                
+            }
+            /* Active State */
+.modal-nav-item.active {
+    background-color: #f4eede; /* Golden orange for active item */
+    padding: 15px 25px;
+    border-radius: 6px;
+}
+
+.modal-nav-link.active {
+    background-color: #e1dcce; /* Golden orange for active link */
+    color: #ffffff; /* White text */
+    font-weight: 600;
+    border-radius: 6px;
+}
+.modal-nav-link.active {
+    background-color: #DAA520; /* Golden orange for active link */
+    color: #ffffff; /* White text */
+    font-weight: 600;
+    border-radius: 6px;
+}
+            
+            /* Hover Effect */
+            .modal-nav-link:hover {
+                background-color: #e4dfd2; /* Golden orange on hover */
+                color: #ffffff;
+                border-radius: 6px;
+                font-weight: 600;
+            }
+            
+            /* Active State */
+            .modal-nav-item.active,
+            .modal-nav-link.active {
+                background-color: #DAA520; /* Golden orange for active state */
+                color: #ffffff;
+                font-weight: 600;
+                border-radius: 6px;
+            }
+            
+            /* List Styles */
+            .list-container {
+                display: grid;
+                gap: 1rem;
+            }
+            
+            .list-item {
+                background: #f8fafc;
+                padding: 1.25rem;
+                border-radius: 0.75rem;
+                border: 1px solid #e2e8f0;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                transition: all 0.2s;
+            }
+            
+            .list-item:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            }
+            
+            .list-icon {
+                font-size: 1.25rem;
+            }
+            
+            .inclusion-icon {
+                color: #22c55e;
+            }
+            
+            .exclusion-icon {
+                color: #ef4444;
+            }
+            /* Dining Section Styles */
+.dining-icon {
+    color: #7c2d12;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: #fff7ed;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+#dining-text .list-container {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+#dining-text .list-item {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#dining-text .list-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #c2410c;
+}
+
+#dining-text .list-item strong {
+    color: #7c2d12;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+#dining-text .list-item span:last-child {
+    flex: 1;
+    line-height: 1.5;
+    color: #4a5568;
+}
+
+/* Icon-specific colors */
+#dining-text .fa-utensils {
+    color: #c2410c;  /* Restaurant */
+}
+
+#dining-text .fa-wine-glass {
+    color: #9a3412;  /* Fine dining */
+}
+
+#dining-text .fa-mug-hot {
+    color: #854d0e;  /* Cafe */
+}
+
+#dining-text .fa-ice-cream {
+    color: #b45309;  /* Dessert */
+}
+
+/* Responsive styles for dining section */
+@media screen and (max-width: 768px) {
+    #dining-text .list-item {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+    
+    .dining-icon {
+        margin: 0 auto;
+    }
+    
+    #dining-text .list-item strong {
+        font-size: 1rem;
+    }
+    
+    #dining-text .list-item span:last-child {
+        font-size: 0.9rem;
+    }
+}
+
+/* Active state for dining tab */
+.modal-nav-link[href="#dining"].active {
+    background-color: #c2410c;
+    color: #ffffff;
+}
+
+/* Hover state for dining items */
+#dining-text .list-item:hover .dining-icon {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Additional spacing for dining section */
+#dining.tab-content {
+    padding: 1rem 0;
+}
+
+#dining h3 {
+    margin-bottom: 1.5rem;
+    color: #7c2d12;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+            /* Itinerary Styles */
+            .itinerary-day {
+                background: #f8fafc;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                margin-bottom: 0.75rem;
+                border: 1px solid #e2e8f0;
+                width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+            
+            .itinerary-day h4 {
+                color: #1e40af;
+                margin-bottom: 0.5rem;
+                font-size: 1.125rem;
+                font-weight: 600;
+                line-height: 1.4;
+                text-align: left;
+            }
+            
+            /* Itinerary Day Content */
+            .itinerary-day .day-content {
+                font-size: 0.95rem;
+                color: #333;
+                line-height: 1.6;
+                margin-bottom: 0.75rem;
+                text-align: left;
+            }
+            
+            /* Tab Image Styles */
+            .tab-image {
+                height: 200px;
+                margin-bottom: 5px;
+            }
+            
+            /* Tab Content */
+            .tab-content {
+                margin-top: 0;
+                padding-top: 0px;
+            }
+            
+            /* Mobile-Specific Styles */
+            @media screen and (max-width: 768px) {
+                .itinerary-day {
+                    padding: 0.75rem;
+                    margin-bottom: 0.5rem;
+                    width: 100%;
+                }
+            
+                .itinerary-day h4 {
+                    font-size: 1rem;
+                    margin-bottom: 0.25rem;
+                    font-weight: 600;
+                    text-align: left;
+                }
+            
+                .itinerary-day .day-content {
+                    font-size: 0.875rem;
+                    line-height: 1.5;
+                    margin-bottom: 0.5rem;
+                }
+            
+                .modal-content {
+                    margin: 0;
+                    padding: 10px;
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    scrollbar-width: thin;
+                    -ms-overflow-style: scrollbar;
+                }
+            
+                .modal-header {
+                    padding: 5px 10px;
+                    margin-bottom: 10px;
+                    background-color: #FFA500;
+                }
+            
+                .modal-title {
+                    font-size: 20px;
+                    margin: 0;
+                }
+            
+                .home-link {
+                    font-size: 14px;
+                    padding: 8px 16px;
+                }
+            
+                .modal-body {
+                    flex-direction: column;
+                    gap: 15px;
+                    overflow: auto;
+                }
+            
+                .modal-sidebar {
+                    flex: none;
+                    width: 100%;
+                    padding: 5px;
+                    margin-bottom: 10px;
+                    overflow-x: auto;
+                }
+            
+                .modal-nav {
+                    display: flex;
+                    overflow-x: auto;
+                    padding: 5px 0;
+                    gap: 5px;
+                    scrollbar-width: thin;
+                    -ms-overflow-style: scrollbar;
+                    position: relative;
+                    overflow-y: auto;
+                }
+            
+                .modal-nav-link {
+                    padding: 0.75rem 1rem;
+                    font-size: 0.875rem;
+                    white-space: nowrap;
+                }
+            }
+            
+        </style>
+     <!-- Package Details Modal -->
+     <div class="modal" id="package-modal">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h2 class="modal-title">Package Details</h2>
+                 <a href="destinations.html" class="home-link">Home</a>
+             </div>
+             <div class="modal-body">
+                 <div class="modal-sidebar">
+                     <ul class="modal-nav">
+                         <li class="modal-nav-item"><a href="#overview" class="modal-nav-link active">Overview</a></li>
+                         <li class="modal-nav-item"><a href="#best-time" class="modal-nav-link">Best Time to Visit</a></li>
+                         <li class="modal-nav-item"><a href="#things-to-do" class="modal-nav-link">Things to Do</a></li>
+                     </ul>
+                 </div>
+                 <div class="modal-main">
+                     <img src="zanzibar-overview.jpg" alt="Package Overview" class="tab-image" style="width: 100%; height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 4rem;">
+  
+                     <div id="overview" class="tab-content active">
+                         <h3>Overview</h3>
+                         <p id="overview-text"></p>
+                     </div>
+  
+                     <div id="best-time" class="tab-content">
+                         <h3>Best Time to Visit</h3>
+                         <p id="best-time-text"></p>
+                     </div>
+  
+                     <div id="things-to-do" class="tab-content">
+                         <h3>Things to Do</h3>
+                         <div id="things-to-do-content"></div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <script>
+        
+        document.addEventListener("DOMContentLoaded", function () {
+    const packageDetails = {
+        'TOUR1': {
+            overview: "The Serengeti in northern Tanzania is a world-famous wildlife destination known for its vast plains, diverse ecosystems, and the iconic **Great Migration**. Each year, millions of wildebeests, zebras, and gazelles journey across the plains in search of grazing and water. This annual event is a natural spectacle that draws photographers, nature lovers, and safari enthusiasts from all over the globe. The Serengeti is also home to the 'Big Five' — lions, elephants, buffaloes, leopards, and rhinos, making it an ideal destination for those wanting to witness Africa's rich wildlife in its natural habitat.",
+            bestTime: "The best time to visit Serengeti is during the dry season, from June to October, when wildlife congregates around water sources, and the landscape is drier, making game viewing easier.",
+            thingsToDo: [
+                "Game drives to witness the Great Migration",
+                "Hot air balloon safaris for breathtaking aerial views",
+                "Visit Maasai villages to learn about their culture",
+                "Safari photography in the plains",
+                "Birdwatching to spot rare species",
+                "Night game drives to see nocturnal wildlife",
+                "Guided walks with a ranger for close encounters with nature"
+            ],
+            images: { overview: "serengeti.jpg" }
+        },
+        'TOUR2': {
+            overview: "The Ngorongoro Conservation Area in Tanzania is renowned for the Ngorongoro Crater, a unique and biodiverse volcanic caldera formed millions of years ago. The crater is a haven for wildlife, and with its lush vegetation, it provides the perfect environment for grazing herbivores and their predators. The region is also home to a variety of bird species, including flamingos in the crater’s soda lakes. In addition to the Crater, the Olduvai Gorge is a must-see. Known as the 'Cradle of Mankind,' it is where some of the earliest human fossils were discovered, providing visitors with a fascinating glimpse into human evolution.",
+            bestTime: "The best time to visit Ngorongoro is from June to October during the dry season, offering clear skies and great wildlife viewing opportunities, with the best chances of spotting the Big Five.",
+            thingsToDo: [
+                "Game drives in the Ngorongoro Crater to see wildlife",
+                "Visit the Olduvai Gorge to learn about early human history",
+                "Maasai cultural experiences",
+                "Birdwatching for flamingos and other species",
+                "Photography of the dramatic crater landscape",
+                "Walks with local guides to explore indigenous flora",
+                "Visit to the Ngorongoro Crater rim for panoramic views"
+            ],
+            images: { overview: "crator.jpg" }
+        },
+        'TOUR3': {
+            overview: "Tarangire National Park is a hidden gem in Tanzania, known for its towering baobab trees and vast herds of elephants that roam freely across the park’s landscape. It is also home to large populations of giraffes, zebras, and buffaloes, which are frequently seen near the seasonal swamps. Tarangire is particularly famous for its birdlife, attracting avid birdwatchers from all over the world. The park is also a great place for off-the-beaten-path safaris, offering visitors an opportunity to experience a less-crowded and more intimate wildlife experience.",
+            bestTime: "Visit Tarangire between June and October for the best wildlife sightings during the dry season when animals gather near the Tarangire River, creating great opportunities for game drives.",
+            thingsToDo: [
+                "Guided game drives to spot elephants and other wildlife",
+                "Birdwatching with guides to spot rare species",
+                "Elephant tracking to learn about their behavior",
+                "Visit the Tarangire River for close-up wildlife encounters",
+                "Photographic safaris for capturing stunning landscapes",
+                "Night safaris to spot nocturnal creatures",
+                "Explore the park’s iconic baobab trees"
+            ],
+            images: { overview: "tarangire.jpg" }
+        },
+        'TOUR4': {
+            overview: "Lake Manyara National Park is a beautiful, compact park known for its striking scenery and variety of wildlife. Famous for its tree-climbing lions and rich birdlife, it offers both exciting game drives and a chance to explore the local Maasai culture. The park's lush forests and the shores of Lake Manyara create a unique and diverse environment for wildlife. It is a great place for visitors looking for a mix of nature, adventure, and culture.",
+            bestTime: "The best time to visit is from June to October, during the dry season, when animals are more likely to gather near water sources, making game viewing easier.",
+            thingsToDo: [
+                "Game drives to see tree-climbing lions",
+                "Explore Maasai villages and learn about their traditions",
+                "Birdwatching along the lake for flamingos and other species",
+                "Photography of the scenic lake and wildlife",
+                "Hiking in the park’s lush forests",
+                "Visit to the Lake Manyara viewpoint for panoramic views",
+                "Cultural immersion experiences with local communities"
+            ],
+            images: { overview: "manyara.jpg" }
+        },
+        'TOUR5': {
+            overview: "Ruaha National Park is Tanzania's largest national park, known for its rugged hills, the Great Ruaha River, and its rich wildlife, including large elephant herds, lions, and rare species like the wild dog. The park's remoteness makes it perfect for visitors looking to experience a less crowded and more authentic safari. With breathtaking landscapes and fantastic wildlife sightings, Ruaha offers a true wilderness experience.",
+            bestTime: "The dry season, from June to October, is the best time to visit, as wildlife congregates near water sources, making game viewing easier.",
+            thingsToDo: [
+                "Game drives to observe wildlife in its natural habitat",
+                "Birdwatching, especially for raptors",
+                "Wildlife photography to capture unique landscapes and species",
+                "Exploring the Great Ruaha River and its wildlife",
+                "Night game drives to spot nocturnal predators",
+                "Nature walks with park rangers to learn about flora",
+                "Cultural experiences with the local tribes"
+            ],
+            images: { overview: "elephant.jpg" }
+        },
+        'TOUR6': {
+            overview: "Mikumi National Park is a hidden treasure that offers an accessible safari experience with fewer crowds. Known for its vast plains and impressive wildlife, including lions, elephants, and giraffes, Mikumi is often described as a 'mini Serengeti.' The park is perfect for those looking to experience Tanzania's wildlife and landscapes without the long travel times to more popular parks.",
+            bestTime: "The best time to visit Mikumi is from June to October, during the dry season, when animals are easier to spot due to the concentration around waterholes.",
+            thingsToDo: [
+                "Game drives to spot the 'Big Five'",
+                "Walking safaris with trained guides",
+                "Wildlife viewing in open plains",
+                "Photography safaris to capture stunning wildlife shots",
+                "Visit to the park’s waterholes for bird and animal sightings",
+                "Camping under the stars for an authentic safari experience",
+                "Cultural tours to learn about the local tribes"
+            ],
+            images: { overview: "lion.jpg" }
+        },
+        'TOUR7': {
+            overview: "Arusha National Park is a versatile destination that offers a mix of wildlife, stunning landscapes, and cultural experiences. With its stunning views of Mount Meru, the park is known for its diverse ecosystems, including rainforests and open savannahs. It’s an excellent place for both game drives and walking safaris, providing a unique perspective of Tanzania’s wildlife and natural beauty.",
+            bestTime: "The best time to visit is during the dry season, from June to October, when the weather is perfect for outdoor activities.",
+            thingsToDo: [
+                "Game drives to explore diverse ecosystems",
+                "Walking safaris through the park’s rainforests",
+                "Trekking to the summit of Mount Meru",
+                "Birdwatching for endemic species",
+                "Photography of the park's landscapes and wildlife",
+                "Cultural tours to interact with the Maasai people",
+                "Guided hikes to waterfalls within the park"
+            ],
+            images: { overview: "kilimanjaro.jpg" }
+        },
+        'TOUR8': {
+            overview: "Zanzibar is an idyllic tropical paradise known for its pristine beaches, rich culture, and historical significance. It offers visitors a mix of relaxation and adventure, with opportunities for snorkeling, diving, and exploring the spice plantations. Zanzibar’s Stone Town, a UNESCO World Heritage site, is a perfect place to explore history and culture, while the surrounding beaches provide an escape for those seeking peace and tranquility.",
+            bestTime: "Zanzibar is a year-round destination, but the best time to visit is during the dry season, from June to October, when the weather is perfect for beach activities.",
+            thingsToDo: [
+                "Snorkeling in the crystal-clear waters",
+                "Diving to explore vibrant coral reefs",
+                "Exploring the historical sites of Stone Town",
+                "Visiting the spice plantations for a cultural tour",
+                "Relaxing on the pristine beaches",
+                "Wildlife watching in Jozani Forest",
+                "Sunset dhow cruises for a romantic experience"
+            ],
+            images: { overview: "zanzibar.jpg" }
+       }
+   };
+
+   document.querySelectorAll('.view-details-btn').forEach(button => {
+       button.addEventListener('click', function (e) {
+           e.preventDefault();
+           const packageId = this.getAttribute('data-package');
+           const modal = document.getElementById('package-modal');
+           const packageData = packageDetails[packageId];
+
+           document.querySelector('#overview-text').textContent = packageData.overview;
+           document.querySelector('#best-time-text').textContent = packageData.bestTime;
+
+           const thingsToDoContent = document.querySelector('#things-to-do-content');
+           thingsToDoContent.innerHTML = `
+               <ul class="custom-list">
+                   ${packageData.thingsToDo.map(item => `
+                       <li class="list-item">
+                           <span class="list-icon">✓</span>
+                           <span>${item}</span>
+                       </li>
+                   `).join('')}
+               </ul>
+           `;
+
+           document.querySelector('.tab-image').src = packageData.images.overview;
+
+           modal.style.display = 'block';
+       });
+   });
+
+   document.querySelector('.home-link').addEventListener('click', function () {
+       document.getElementById('package-modal').style.display = 'none';
+   });
+
+   document.querySelectorAll('.modal-nav-link').forEach(link => {
+       link.addEventListener('click', function (e) {
+           e.preventDefault();
+           document.querySelectorAll('.modal-nav-link').forEach(navLink => navLink.classList.remove('active'));
+           this.classList.add('active');
+           document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+           document.querySelector(this.getAttribute('href')).classList.add('active');
+       });
+   });
+});
+
+     </script>
+
+        <style>
+            /* Modal container */
+            .unique-footer-modal {
+                display: none;
+                position: fixed;
+                top: 100px;
+                left: 0;
+                width: 100%;
+                height: 130vh;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 1000;
+                overflow-y: auto;
+            }
+    
+            /* Modal content */
+            .unique-footer-modal-content {
+                position: relative;
+                background: linear-gradient(135deg, #e0eafc, #cfdef3);
+                margin: 0 auto;
+                padding: 40px;
+                max-width: 1200px;
+                width: 95%;
+                min-height: 80vh;
+                border-radius: 12px;
+                color: #333;
+                overflow-y: auto;
+                border: 3px solid #f39c12;
+                transition: all 0.3s ease-in-out;
+                z-index: 1050;
+                animation: modal-appear 0.3s ease-out;
+            }
+    
+            /* Animation for modal appearance */
+            @keyframes modal-appear {
+                0% { opacity: 0; transform: scale(0.85); }
+                100% { opacity: 1; transform: scale(1); }
+            }
+    
+            .unique-footer-modal-content:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            }
+    
+            /* Modal header */
+            .unique-footer-modal-header {
+                font-size: 3rem; /* Significantly increased font size */
+                color: #34495e;
+                font-weight: 700;
+                margin-bottom: 20px;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+                transition: color 0.3s ease;
+            }
+    
+            .unique-footer-modal-header:hover {
+                color: #f39c12;
+            }
+    
+            /* Modal body */
+            .unique-footer-modal-body {
+                font-size: 1.8rem; /* Significantly increased font size */
+                line-height: 1.8;
+                color: #555;
+                transition: color 0.3s ease;
+            }
+    
+            .unique-footer-modal-body:hover {
+                color: #2c3e50;
+            }
+    
+            /* Close button */
+            .unique-footer-close-btn {
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                font-size: 50px; /* Significantly increased font size */
+                color: #e74c3c;
+                cursor: pointer;
+                transition: color 0.3s ease, transform 0.3s ease;
+            }
+    
+            .unique-footer-close-btn:hover {
+                color: #f39c12;
+                transform: rotate(180deg);
+            }
+    
+            /* List styling */
+            .unique-footer-modal-content ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
+    
+            .unique-footer-modal-content ul li {
+                background-color: #fff;
+                margin: 10px 0;
+                padding: 15px;
+                border-left: 6px solid #f39c12;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                font-size: 1.5rem; /* Significantly increased font size */
+            }
+    
+            .unique-footer-modal-content ul li:hover {
+                background-color: #f8f8f8;
+                transform: translateX(10px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+    
+            .unique-footer-modal-content ul li:first-child {
+                margin-top: 0;
+            }
+    
+            .unique-footer-modal-content ul li:last-child {
+                margin-bottom: 0;
+            }
+    
+            /* Responsive design */
+            @media (max-width: 768px) {
+                .unique-footer-modal-content {
+                    margin: 20px;
+                    width: calc(100% - 40px);
+                    padding: 30px;
+                }
+    
+                .unique-footer-modal-header {
+                    font-size: 2.5rem; /* Adjusted for mobile */
+                }
+    
+                .unique-footer-modal-body {
+                    font-size: 1.5rem; /* Adjusted for mobile */
+                }
+    
+                .unique-footer-close-btn {
+                    font-size: 45px; /* Adjusted for mobile */
+                }
+    
+                .unique-footer-modal-content ul li {
+                    font-size: 1.3rem; /* Adjusted for mobile */
+                }
+            }
+        </style>
+
+    <!-- Existing footer code -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <div class="footer-links">
+                    <a href="#" onclick="openFooterModal('terms')">Terms and Conditions</a>
+                    <a href="#" onclick="openFooterModal('privacy')">Privacy</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Travel Information</h4>
+                <div class="footer-links">
+                    <a href="#" onclick="openFooterModal('weather')">Tanzania Weather</a>
+                    <a href="#" onclick="openFooterModal('yellow-fever')">Yellow Fever Requirement</a>
+                    <a href="#" onclick="openFooterModal('visit')">When to Visit</a>
+                    <a href="#" onclick="openFooterModal('resources')">Travel Resources</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Travel Guide</h3>
+                <div class="footer-links">
+                    <a href="#" onclick="openFooterModal('faq')">Frequently Asked Questions</a>
+                    <a href="#" onclick="openFooterModal('mountain-packing')">Mountain Packing List</a>
+                    <a href="#" onclick="openFooterModal('safari-packing')">Packing List for Safaris</a>
+                    <a href="#" onclick="openFooterModal('coding')">Safari Coding</a>
+                    <a href="#" onclick="openFooterModal('things-to-do')">Things to Do</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="footer-links">
+                    <p>Call and WhatsApp: <br>+255 692 208 654 <br></p>
+                    <p>Email: info@mafoyafricasafaris.com</p>
+                    <p>Email: mafoyafricasafaris@gmail.com </p>
+                    <p>Address: Arusha, Tanzania</p>
+            
+                    <a href="https://www.facebook.com/profile.php?id=61562231871069" target="_blank" style="color: #1877F2; text-decoration: none;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+                             alt="Facebook" width="20" height="20" style="vertical-align: middle;">
+                        Facebook
+                    </a>
+                    <br>
+                    <a href="https://www.instagram.com/mafoy_africa_safaris/?hl=en" target="_blank" style="color: #E4405F; text-decoration: none;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" 
+                             alt="Instagram" width="20" height="20" style="vertical-align: middle;">
+                        Instagram
+                    </a>
+                </div>
+            </div>
+            
+            
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-brand">
+                    <p>Mafoy Africa Safaris. All Rights Reserved.</p>
+                </div>
+                <div class="footer-legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for footer -->
+    <div id="uniqueFooterModal" class="unique-footer-modal">
+        <div class="unique-footer-modal-content">
+            <span class="unique-footer-close-btn" onclick="closeFooterModal()">&times;</span>
+            <div class="unique-footer-modal-header"></div>
+            <div class="unique-footer-modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+        const footerModalContent = {
+            'terms': {
+                title: 'Terms and Conditions',
+                content: `
+            <h3>Payments and Refunds</h3>
+            <p>The agreed payment terms apply. Usually, a deposit payment is made when the reservation is done. The amount of the deposit depends on the type of safari and accommodation. In the case of Lodge Safaris, the deposit is 30% of the overall value. Payment of the deposit is due at reservation.</p>
+            <p>The remaining balance is to be paid before the tour starts, usually in cash. In case payment with a credit card is preferred, the customer has to add the handling fees that are charged to the Agency, normally 4% to 6% of the remaining balance.</p>
+            
+            <h3>Cancellation Policy</h3>
+            <ul>
+                <li>All bookings should be confirmed by payment as per the terms of your personal schedule.</li>
+                <li>Cancellation less than 72 hours prior to departure will be charged 100%.</li>
+                <li>Cancellation 72 hours to 7 days prior to departure will be charged 75%.</li>
+                <li>Cancellation 7 days to 21 days prior to departure will be charged 50%.</li>
+                <li>Cancellation 21 days or longer prior to departure incurs no cancellation fee.</li>
+            </ul>
+            <p>Cancellation can only be done by email to our email address.</p>
+            <p><strong>No Shows</strong> will be charged 100% (no show also includes showing up after the meeting time).</p>
+        `
+    },
+            'privacy': {
+    title: 'Privacy Policy',
+    content: `<ul>
+                <li>We are committed to protecting your privacy and keeping your data secure.</li>
+                <li>Your personal information, such as name, email, and phone number, is used only for inquiries, quotations, and operational purposes.</li>
+                <li>We will not share your information with third parties for marketing without your consent.</li>
+                <li>Cookies are used to enhance your experience and track anonymous website activity. You can manage cookies through your browser settings.</li>
+                <li>Google Analytics helps us analyze site visits but does not collect personally identifiable information.</li>
+                <li>Links to external sites are provided for convenience, but we are not responsible for their privacy practices.</li>
+                <li>You can update your preferences or withdraw consent for marketing communications by contacting us at any time.</li>
+              </ul>`
+},
+ 'weather': {
+    title: 'Tanzania Weather',
+    content: `
+        <ul>
+            <li>Tanzania weather differs from region to region, but it’s always a great time to travel in Tanzania!</li>
+            <li>The coastal areas are the hottest and most humid, while the North and highlands are cooler due to altitude.</li>
+            <li>Temperatures typically range between 22°C and 31°C throughout the year.</li>
+            <li>During the night, temperatures can drop to between 10°C and 22°C.</li>
+            <li>Zanzibar, located close to the Equator, has a tropical climate with warmer temperatures.</li>
+            <li>Tanzania has two main seasons: the wet and the dry season.</li>
+            <li>The wet season runs from the end of October to December, and again from March to June. These are the 'short' and 'long rains'.</li>
+            <li>The dry season, which runs from June to October, is the best time for safaris, as the weather is dry and sunny.</li>
+            <li>During the rainy season, tropical rains usually occur in the late afternoon and continue through the night.</li>
+        </ul>
+    `
+}
+,
+
+            'yellow-fever': {
+                title: 'Tanzania Yellow Fever Requirements',
+    content: `
+        <ul>
+            <li>Proof of yellow fever vaccination is required <strong>only</strong> if you are traveling from a country with a risk of the virus.</li>
+            <li>Countries in Europe and the United States are not on the list of high-risk countries.</li>
+            <li>If transiting through a yellow fever high-risk country for <strong>12 hours or more</strong>, vaccination is mandatory.</li>
+            <li>We recommend consulting your doctor or a healthcare professional to confirm Tanzania vaccination requirements before traveling.</li>
+        </ul>
+    `
+},
+            'visit': {
+                title: 'When to Visit Tanzania',
+    content: `<ul>
+                <li>The best time to visit Tanzania depends on what you want to see, where you want to go, your budget, and your interests.</li>
+                <li>Every time of the year has its pros and cons, but here’s a guide to help you decide the best time for your Tanzanian adventure.</li>
+                <li>The best months are June to October and December to February. These months are ideal for wildlife sightings and the epic wildebeest migration.</li>
+                <li>June to October: Sunny skies, wildlife galore, and great game-viewing opportunities.</li>
+                <li>December to February: Lush green landscapes and adorable baby animals everywhere.</li>
+                <li>March, April, May, and November: A hidden gem for vibrant greenery, bird-watching, and fewer crowds.</li>
+                <li>Although these months might bring rain, they still offer a unique and peaceful safari experience.</li>
+              </ul>`
+},
+            'resources': {
+                title: 'Travel Resources',
+                content: `<ul>
+                            <li>Visa information: Ensure you have the necessary travel documents.</li>
+                            <li>Currency exchange: Use Tanzanian Shillings for transactions.</li>
+                            <li>Local guides: Hiring a local guide enhances your safari experience.</li>
+                          </ul>`
+            },
+            'faq': {
+                title: 'Tanzania Safari Frequently Asked Questions',
+    content: `<ul>
+                <li><strong>When is the best time to go on the Tanzania safari?</strong> Tanzania Safari holidays are great all-year-round. The best time depends on the type of safari activity you choose, but the dry season from June to October is considered the best time for safaris.</li>
+                <li><strong>When is the best time to see the great wildebeest migration in Tanzania?</strong> The wildebeest migration typically takes place from June to July and January to February. During December to March, the migration congregates in large herds around Lake Ndutu in the Ngorongoro Conservation Area.</li>
+                <li><strong>What should I take on safari in Tanzania?</strong> It's important to pack comfortable clothing for various weather conditions. Recommended items include:
+                    <ul>
+                        <li>Shorts</li>
+                        <li>T-shirts</li>
+                        <li>Rain jacket</li>
+                        <li>Warm sweater</li>
+                        <li>Hat</li>
+                        <li>Swimsuit & swimsuit cover-up</li>
+                        <li>Sunglasses</li>
+                        <li>Safari boots</li>
+                        <li>Sneakers</li>
+                        <li>First Aid kit</li>
+                        <li>Plasters and anti-bacterial medicines</li>
+                        <li>Binoculars for animal sighting</li>
+                    </ul>
+                </li>
+                <li><strong>What does a Tanzania Safari cost?</strong> Safari costs depend on various factors such as duration, accommodation type, and the number of travelers. A budget safari starts from $200 per person per day, with standard safaris ranging from $300 to $400, and luxury packages from $500 to $700 per person per day.</li>
+              </ul>`
+},
+            'mountain-packing': {
+                title: 'Mountain Packing List',
+                content: `<ul>
+                            <li>Sturdy hiking boots</li>
+                            <li>Warm clothing for cold nights</li>
+                            <li>Waterproof jacket</li>
+                            <li>Headlamp with extra batteries</li>
+                          </ul>`
+            },
+            'safari-packing': {
+                title: 'Kilimanjaro Packing List',
+    content: `
+        <h3>Kilimanjaro Packing List</h3>
+        <p>Climbing Mount Kilimanjaro requires proper preparation, and packing the right gear is crucial for a safe and comfortable experience. Here’s a comprehensive packing list to help you get ready:</p>
+        
+        <h4>Essential Gear:</h4>
+        <ul>
+            <li>4 pairs of thick trekking socks</li>
+            <li>3-4 thermal undergarments</li>
+            <li>4 thermal t-shirts</li>
+            <li>Underwear</li>
+            <li>2 thermal long-sleeved tops</li>
+            <li>Normal t-shirts</li>
+            <li>1 fleece sweater</li>
+            <li>1 ski-mask</li>
+            <li>1 balaclava</li>
+            <li>1 sun hat</li>
+            <li>1 pair of sunglasses (with UV protection)</li>
+            <li>1 pair of thin warm gloves</li>
+            <li>1 pair of thick warm gloves (for summit day)</li>
+            <li>1 pair of rain trousers/waterproof trousers</li>
+            <li>1 rain jacket</li>
+            <li>2 pairs of warm trousers</li>
+            <li>1 winter jacket (wind stopper summit)</li>
+        </ul>
+        
+        <h4>Daypack Essentials:</h4>
+        <ul>
+            <li>Waterproof clothes</li>
+            <li>3-litre water system or water bottle</li>
+            <li>Thermos flask</li>
+            <li>1 pair of hiking poles</li>
+            <li>1 pair of gaiters</li>
+            <li>1 sleeping bag (warm enough for -10°C to -15°C temperatures)</li>
+            <li>1 head torch + spare batteries</li>
+            <li>1 waterproof rack sack and 1 poncho</li>
+        </ul>
+
+        <h4>Top Tips for Kilimanjaro Packing:</h4>
+        <ul>
+            <li><strong>Reduce Costs by Hiring:</strong> Hire high-quality equipment rather than buying cheap versions.</li>
+            <li><strong>Two Bags:</strong> Use a duffel bag for the porters and a backpack for your daily gear.</li>
+            <li><strong>Porter Bag Limit:</strong> Kilimanjaro porters can carry only 15 kg of kit (including the weight of the bag).</li>
+            <li><strong>Leave Extra Luggage:</strong> Any extra luggage can be left in storage at your accommodation.</li>
+            <li><strong>Wear Trekking Clothes:</strong> Travel in your trekking clothes and boots, or pack them in your hand luggage.</li>
+            <li><strong>Layer Clothing:</strong> Prepare for fluctuating temperatures, from -15°C to 35°C (5°F to 95°F).</li>
+            <li><strong>Avoid Cotton:</strong> Use moisture-wicking fabrics like merino wool or synthetic materials.</li>
+            <li><strong>Waterproof Gear:</strong> Bring quality waterproof jackets, trousers, and bag covers.</li>
+            <li><strong>Comfortable Hiking Boots:</strong> Make sure your boots are well-worn and comfortable.</li>
+            <li><strong>Reusable Water Bottles:</strong> Disposable plastic bottles are not allowed. Bring reusable bottles or hydration packs.</li>
+            <li><strong>Solar Protection:</strong> Protect yourself from the sun with a hat, sunscreen, sunglasses, and SPF lip protection.</li>
+            <li><strong>Hygiene:</strong> Antibacterial gel and wipes are essential for personal hygiene.</li>
+            <li><strong>Snacks:</strong> Bring snacks for long hikes, especially for summit night.</li>
+        </ul>
+
+        <p>By packing carefully and following these tips, you’ll be prepared for the challenges of climbing Mount Kilimanjaro and have a rewarding experience.</p>
+    `
+},
+            'coding': {
+                title: 'Safari Coding',
+                content: `<ul>
+                            <li>Shorts</li>
+  <li>T-shirts</li>
+  <li>Rain jacket</li>
+  <li>Warm sweater</li>
+  <li>Hat</li>
+  <li>Swimsuit & swimsuit cover-up</li>
+  <li>Sunglasses</li>
+  <li>Safari boots</li>
+  <li>Sneakers</li>
+  <li>First Aid kit</li>
+  <li>Plasters and anti-bacterial medicines</li>
+  <li>Binoculars for animal sighting</li>`
+            },
+            'things-to-do': {
+                title: 'Things To Do In Tanzania',
+    content: `
+        <h3>Things To Do In Tanzania</h3>
+        <p>Tanzania is a country full of wildlife safaris, pristine coastline, vast plains, world-class diving, and friendly locals! It’s a destination that promises unforgettable experiences. From safaris to cultural encounters, here’s a list of things you can’t miss:</p>
+        <ul>
+            <li><strong>Go on a Safari</strong> - Explore the famous Serengeti, Tarangire, and Ngorongoro National Parks, with Serengeti being a UNESCO World Heritage Site. Enjoy thrilling wildlife encounters, especially with predators.</li>
+            <li><strong>Conquer Mount Kilimanjaro</strong> - Take on the world’s highest free-standing mountain. The climb is challenging, but the experience is rewarding. Don’t forget to visit Mount Meru and Oldonyo Lengai.</li>
+            <li><strong>Witness the Great Migration</strong> - Witness the incredible migration of zebras, gazelles, and wildebeest across the Serengeti, a true spectacle of nature.</li>
+            <li><strong>Discover Magical Zanzibar</strong> - Visit Zanzibar’s pristine beaches and Swahili coast, perfect for diving, relaxation, and exploring the city’s Arabic-influenced architecture.</li>
+            <li><strong>Game Drives</strong> - Tanzania offers the best game drives, from the Serengeti to the Ngorongoro Crater, where you can spot the Big Five and enjoy the annual migration.</li>
+        </ul>
+        <p>In addition to these iconic activities, Tanzania also offers:</p>
+        <ul>
+            <li>Visit the Hadzabe tribe near Lake Eyasi</li>
+            <li>Explore Lake Natron and its Flamingo population</li>
+            <li>Meet local craftsmen such as jewelers, wood carvers, and potters</li>
+            <li>Visit a Maasai tribe and learn about their customs</li>
+            <li>Walk in a local village, experience local food and drinks like banana beer and wine</li>
+            <li>Take a bike tour around Lake Manyara</li>
+        </ul>
+        <p>Tanzania is a country that will leave you with a lifetime of memories. Whether you’re seeking adventure, relaxation, or cultural exploration, there’s something for everyone!</p>
+    `
+},
+        };
+
+        function openFooterModal(id) {
+            const modal = document.getElementById('uniqueFooterModal');
+            const content = footerModalContent[id];
+            if (content) {
+                modal.querySelector('.unique-footer-modal-header').textContent = content.title;
+                modal.querySelector('.unique-footer-modal-body').innerHTML = content.content;
+                modal.style.display = 'block';
+            }
+        }
+
+        function closeFooterModal() {
+            document.getElementById('uniqueFooterModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('uniqueFooterModal');
+            if (event.target === modal) {
+                closeFooterModal();
+            }
+        }
+    </script>
+
+    <style>
+        section {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 40px 0; /* Increased padding */
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px; /* Increased gap */
+            padding: 20px 0; /* Increased padding */
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px; /* Adjusted min-width */
+            text-align: left;
+        }
+
+        /* Heading styles - preserved and enhanced */
+        .footer-section h3 {
+            font-size: 1.0rem; /* Increased font size */
+            margin-bottom: 20px; /* Increased margin */
+            color: #FF9900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700; /* Bold font weight */
+        }
+        .footer-section h4 {
+            text-transform: uppercase;
+            margin-bottom: 20px; /* Increased margin */
+            color: #FF9900;
+          
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-links a, .footer-links p {
+            color: #ECF0F1;
+            text-decoration: none;
+            margin-bottom: 12px; /* Increased margin */
+            font-size: 1.1rem; /* Increased font size */
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #FF9900;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            margin-top: 30px; /* Increased margin */
+            padding: 20px 0; /* Increased padding */
+            background-color: #2C3E50;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-bottom-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px; /* Adjusted padding */
+        }
+
+        .footer-legal-links a {
+            color: #ECF0F1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            margin: 0 12px; /* Increased margin */
+            font-size: 1rem; /* Increased font size */
+        }
+
+        .footer-legal-links a:hover {
+            color: #FF9900;
+        }
+
+        .separator {
+            margin: 0 12px; /* Increased margin */
+            color: rgba(255,255,255,0.3);
+        }
+
+        .footer-brand p {
+            color: #ECF0F1;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: 1px;
+            font-size: 1rem; /* Increased font size */
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 20px; /* Adjusted padding */
+            }
+
+            .footer-section {
+                text-align: left;
+                width: 100%;
+            }
+
+            .footer-section h3 {
+                font-size: 1.3rem; /* Adjusted font size for mobile */
+            }
+
+            .footer-links a, .footer-links p {
+                font-size: 1rem; /* Adjusted font size for mobile */
+            }
+
+            .footer-legal-links a {
+                font-size: 0.9rem; /* Adjusted font size for mobile */
+            }
+
+            .footer-brand p {
+                font-size: 0.9rem; /* Adjusted font size for mobile */
+            }
+        }
+    </style>
+
+</body>
+</html>

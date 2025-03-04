@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="mafoy.png" type="image/png">
+
+    <!-- Meta Tags for Search Engine and Social Media -->
+    <meta property="og:title" content="Mafoy Africa Safaris | Luxury Safari Experience">
+    <meta property="og:description" content="Explore the best of Tanzania with Mafoy Africa Safaris. Book your adventure now for unforgettable safari experiences.">
+    <meta property="og:image" content="mafoy.png">
+    <meta property="og:url" content="https://mafoyafricasafaris.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mafoy Africa Safaris | Luxury Safari Experience">
+    <meta name="twitter:description" content="Explore the best of Tanzania with Mafoy Africa Safaris. Book your adventure now for unforgettable safari experiences.">
+    <meta name="twitter:image" content="mafoy.png">
+
+    <!-- SEO Description -->
+    <meta name="description" content="Mafoy Africa Safaris offers exceptional safari packages in Arusha, Tanzania. Explore the beauty of Tanzania’s wildlife, landscapes, and culture. Book your unforgettable adventure today with Mafoy Africa Safaris!">
+
+    <title>Mafoy Africa Safaris | Luxury Safari Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color: #ffffff; /* White text */
+            background-color: #d99d42; /* Golden orange background for the header */
+            width: 100%; /* Ensure the golden orange color covers the entire width */
+            position: relative; /* Positioning for menu button inside header */
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            color: #ffffff; /* White text for logo */
+            background-color: #d99d42; /* Golden orange background for logo */
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        /* Google Translate Widget */
+        #google_translate_element {
+            display: inline-block;
+            margin-left: 20px; /* Add spacing between the navigation and the widget */
+        }
+
+        /* Mobile Menu Button */
+        .menu-btn {
+            display: flex;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            position: absolute; /* Position absolutely inside the header */
+            right: 20px; /* Align the button to the right inside the header */
+            background-color: transparent; /* No background for the button itself */
+            padding: 10px; /* Add padding to make button area clickable */
+        }
+
+        .menu-btn div {
+            width: 30px;
+            height: 4px;
+            background-color: #ffffff; /* White color for mobile menu lines */
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .mobile-nav.active {
+            display: flex;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            width: 100%;
+            padding: 0;
+        }
+
+        .mobile-nav ul li {
+            width: 100%;
+        }
+
+        .mobile-nav ul li a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #333; /* Dark text color */
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .mobile-nav ul li a:hover {
+            background-color: #f4f4f4;
+            color: #b96329; /* Burnt orange color on hover */
+        }
+
+        /* Desktop View */
+        @media (min-width: 769px) {
+            header {
+                padding: 10px 5%;
+                display: flex;
+                justify-content: space-between; /* Align logo and menu at opposite ends */
+                align-items: center;
+            }
+
+            .menu-btn {
+                display: none;
+            }
+
+            /* Hide Menu Text in desktop view */
+            .menu-text {
+                display: none;
+            }
+
+            /* Align the navigation to the right */
+            header nav {
+                margin-left: auto; /* Push navigation to the right */
+            }
+
+            header nav ul {
+                display: flex;
+                list-style: none;
+                gap: 20px;
+            }
+
+            header nav ul li {
+                position: relative;
+            }
+
+            header nav ul li a {
+                text-decoration: none;
+                color: #ffffff; /* White text for navigation items */
+                font-weight: 600;
+                transition: color 0.3s;
+            }
+
+            header nav ul li a:hover {
+                color: #b96329; /* Burnt orange color on hover */
+            }
+
+            /* Dropdown Styling */
+            .dropdown {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: white;
+                min-width: 200px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+
+            /* Show the dropdown when hovering over the parent */
+            header nav ul li:hover .dropdown {
+                display: block;
+            }
+
+            .dropdown li {
+                width: 100%;
+            }
+
+            .dropdown a {
+                display: block;
+                padding: 10px 15px;
+                color: #333;
+            }
+
+            .dropdown a:hover {
+                background-color: #f4f4f4;
+            }
+
+            /* Update logo background to golden orange for desktop view */
+            .logo {
+                background-color: #d99d42; /* Golden orange background for logo on desktop */
+                color: white; /* White text color for logo text */
+            }
+
+            .logo img {
+                width: 50px; /* Adjust logo size */
+                margin-right: 10px;
+            }
+
+            .logo span {
+                font-size: 1.6rem; /* Increase font size for better visibility */
+                font-weight: bold;
+            }
+        }
+
+        /* Mobile Specific Adjustments */
+        @media (max-width: 768px) {
+            /* Make the entire header section golden orange on mobile */
+            header {
+                display: block;
+                padding: 0; /* Remove default padding */
+                background-color: #d99d42; /* Golden orange background for the entire header */
+                width: 100%; /* Make the golden orange background cover the entire width */
+            }
+
+            /* Logo on top of the header in mobile view with full-width golden orange background */
+            .logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%; /* Full-width */
+                background-color: #ffffff; /* White background for logo part */
+                padding: 30px 0; /* Increased padding for larger header */
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+            }
+
+            .logo img {
+                width: 60px; /* Adjust logo size */
+                margin-right: 10px;
+            }
+
+            .logo span {
+                font-size: 1.6rem; /* Increase font size for better visibility */
+                font-weight: bold;
+                color: #333; /* Dark text color for logo in mobile view */
+            }
+
+            /* Header section with mobile menu icon */
+            header nav {
+                display: none; /* Hidden by default */
+            }
+
+            /* Mobile Navigation visible when active */
+            .mobile-nav.active {
+                display: flex;
+            }
+
+            /* "Menu" Text */
+            .menu-text {
+                color: white;
+                font-size: 1.4rem;
+                font-weight: bold;
+                margin-left: 20px;
+            }
+
+            /* Dropdown menu visibility when "Tours" is clicked */
+            .mobile-nav ul li .dropdown {
+                display: none;
+            }
+
+            .mobile-nav ul li.active .dropdown {
+                display: block;
+            }
+
+            /* Hide Google Translate Widget on Mobile */
+            #google_translate_element {
+                display: none;
+            }
+        }
+
+
+
+
+        
+/* Google Translate */
+    body {
+        margin: 0;
+        padding: 20px; /* Added for visibility */
+    }
+
+    /* Make sure button is visible */
+    #translateBtn {
+        background-color: #4285f4 !important;
+        color: white !important;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 4px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+        display: inline-flex !important; /* Force display */
+        align-items: center;
+        position: relative; /* Ensure z-index works */
+        z-index: 9999; /* Keep above other elements */
+    }
+
+    /* Google Translate Element Hiding */
+    .goog-te-banner-frame {
+        display: none !important;
+    }
+
+    .goog-te-combo {
+        opacity: 0; /* Hide original dropdown */
+        position: absolute;
+        left: -9999px;
+    }
+
+    /* Load Roboto Font */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <!-- Logo (Visible in both mobile and desktop but different positioning) -->
+        <div class="logo">
+            <img src="mafoy2.jpg.png" alt="Mafoy Africa Safaris">
+            <span>Mafoy Africa Safaris</span>
+        </div>
+
+        <!-- Google Translate Widget -->
+        
+        <!-- Google Translate -->
+        <button id="translateBtn">
+            <span style="margin-right: 8px">🌐</span> <!-- Fallback emoji -->
+            Translate
+        </button>
+    
+        <!-- Google Translate Container -->
+        <div id="google_translate_element"></div>
+    
+        <script>
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: 'en,sw,fr,es,de,it,pt,ru,zh-CN,ja',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+    
+                // Click handler with error checking
+                const translateButton = document.getElementById('translateBtn');
+                if (translateButton) {
+                    translateButton.addEventListener('click', () => {
+                        const googleDropdown = document.querySelector('.goog-te-combo');
+                        if (googleDropdown) {
+                            googleDropdown.dispatchEvent(new Event('mousedown'));
+                        }
+                    });
+                }
+            }
+        </script>
+         <!-- Google Translate Script with Error Handling -->
+         <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+        <!-- Mobile Menu Button and "Menu" Text -->
+        <div class="menu-btn" onclick="toggleMobileMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <span class="menu-text">Menu</span> <!-- Menu Text added here -->
+
+        <!-- Desktop Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li class="tour-item">
+                    <a href="tours.html" onclick="toggleDropdown(event)">Tours</a>
+                    <ul class="dropdown">
+                        <li><a href="day-trips.html">Day Trip Packages</a></li>
+                        <li><a href="budget-tours.html">Budget Tour Packages</a></li>
+                        <li><a href="midrange-tours.html">Midrange Tour Packages</a></li>
+                        <li><a href="luxury-tours.html">Luxury Tour Packages</a></li>
+                        <li><a href="hiking.html">Hiking Packages</a></li>
+                        <li><a href="zanzibar-holidays.html">Zanzibar Holidays Packages</a></li>
+                    </ul>
+                </li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="about_us.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li class="tour-item">
+                <a href="tours.html" onclick="toggleDropdown(event)">Tours</a>
+                <ul class="dropdown">
+                    <li><a href="day-trips.html">Day Trip Packages</a></li>
+                    <li><a href="budget-tours.html">Budget Tour Packages</a></li>
+                    <li><a href="midrange-tours.html">Midrange Tour Packages</a></li>
+                    <li><a href="luxury-tours.html">Luxury Tour Packages</a></li>
+                    <li><a href="hiking.html">Hiking Packages</a></li>
+                    <li><a href="zanzibar-holidays.html">Zanzibar Holidays Packages</a></li>
+                </ul>
+            </li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            document.querySelector('.mobile-nav').classList.toggle('active');
+        }
+
+        // Toggle Dropdown for "Tours"
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const parentLi = event.target.parentElement;
+            parentLi.classList.toggle('active');
+        }
+
+        // Save and Restore Language Preference
+        function googleTranslateElementInit() {
+            // Restore the selected language from localStorage
+            const savedLanguage = localStorage.getItem('selectedLanguage');
+            if (savedLanguage) {
+                setTimeout(() => {
+                    const select = document.querySelector('.goog-te-combo');
+                    if (select) {
+                        select.value = savedLanguage;
+                        select.dispatchEvent(new Event('change'));
+                    }
+                }, 500); // Wait for the Google Translate widget to load
+            }
+
+            // Initialize the Google Translate widget
+            new google.translate.TranslateElement(
+                {
+                    pageLanguage: 'en', // Default language of your website
+                    includedLanguages: 'en,es,fr,de,zh-CN,ja', // Languages you want to support
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // Layout style
+                },
+                'google_translate_element' // ID of the div where the widget will appear
+            );
+
+            // Save the selected language to localStorage
+            document.addEventListener('click', (event) => {
+                const select = document.querySelector('.goog-te-combo');
+                if (select && event.target === select) {
+                    localStorage.setItem('selectedLanguage', select.value);
+                }
+            });
+        }
+    </script>
+
+    
+
+
+    <style>
+        /* General reset and styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            animation: fadeInBody 1s ease-out;
+            zoom: 0.67;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #d4af37; /* Golden color */
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid #d4af37; /* Golden border */
+        }
+
+        .about-container h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        .about-container p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #555;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .about-container p.highlight {
+            font-weight: bold;
+            color: #d4af37; /* Golden color */
+            text-transform: uppercase;
+        }
+
+        /* Animating text slide-in from the top */
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Excellence Section Styling (Unchanged) */
+        .excellence-section {
+            background: linear-gradient(to right, #2980b9, #8e44ad);
+            padding: 50px 20px;
+            margin: 40px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            color: #fff;
+            text-align: center;
+            position: relative;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .excellence-section::before {
+            content: '';
+            background: url('excellence-background.jpg') no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.2;
+            z-index: -1;
+            border-radius: 15px;
+        }
+
+        .excellence-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .excellence-point {
+            margin-bottom: 30px;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+        }
+
+        .excellence-point i {
+            font-size: 50px;
+            color: #fff;
+            background-color: #2980b9;
+            padding: 20px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .excellence-point i:hover {
+            transform: scale(1.1);
+        }
+
+        .excellence-point h3 {
+            font-size: 1.4rem;
+            margin-top: 10px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .excellence-point p {
+            font-size: 1.1rem;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* CEO Section Styling */
+        .ceo-section {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+            margin: 50px 0;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .ceo-section img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #d4af37; /* Golden border */
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .ceo-section img:hover {
+            transform: scale(1.05);
+        }
+
+        .ceo-section h3 {
+            font-size: 2rem;
+            color: #071c2a;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .ceo-section p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Offering Card Hover Effect */
+        .offering-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+            background-color: #f1f1f1;
+        }
+
+        /* Grid Layout for Offerings */
+        .offerings {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 cards per row */
+            gap: 20px;
+            justify-items: center; /* Centers items horizontally */
+            align-items: center;   /* Centers items vertically */
+            animation: fadeInUp 2s ease-out;
+            max-width: 1200px; /* Ensures the grid doesn't stretch too wide */
+            margin-left: auto; /* Centers the grid container */
+            margin-right: auto; /* Centers the grid container */
+        }
+
+        /* Center the last card if it's alone in the second row */
+        .offerings .offering-card:last-child:nth-child(3n + 1) {
+            grid-column: 2; /* Centers the last card */
+        }
+
+        /* Offering Card Styling */
+        .offering-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            border-bottom: 5px solid #d4af37; /* Golden border */
+            display: flex;                  /* Ensures content is properly aligned */
+            flex-direction: column;         /* Stacks elements vertically */
+            align-items: center;            /* Centers content inside the card */
+            justify-content: space-between; /* Spreads out the content */
+            width: 100%; /* Ensures cards take full width of their grid cell */
+        }
+
+        .offering-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .offering-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .offering-card .content {
+            padding: 15px;
+        }
+
+        .offering-card .content h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: #071c2a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .offering-card .content p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+      /* Mobile-friendly Offers Section */
+@media (max-width: 768px) {
+    .offerings {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Spacing between cards */
+    }
+
+    .offering-card {
+        width: 90%; /* Adjust card width for better alignment */
+        padding: 10px;
+    }
+
+    .offering-card img {
+        height: 180px; /* Adjusted image height */
+        border-radius: 10px;
+    }
+
+    .offering-card .content h3 {
+        font-size: 1.3rem;
+        margin-top: 10px;
+    }
+
+    .offering-card .content p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+    </style>
+
+    <div class="about-container">
+        <h1>About Us</h1>
+        <p>
+            Welcome to <span class="highlight">Mafoy Africa Safaris</span>, where we bring the best of Tanzania to the world! Since our founding in 2024, we have been dedicated to providing our clients with personalized and unforgettable safari experiences.
+        </p>
+        <p>
+            From wildlife adventures in Serengeti to cultural immersion in Maasai villages, we are committed to offering you the most diverse and exciting tours in Tanzania.
+        </p>
+
+        <!-- What We Offer Section -->
+        <div class="section-title" style="font-size: 2.5rem; margin: 40px 0; color: #d4af37; font-weight: bold; text-transform: uppercase;">
+            What We Offer
+        </div>
+        <div class="offerings">
+            <!-- Wildlife Safari -->
+            <div class="offering-card">
+                <img src="lion.jpg" alt="Wildlife Safari">
+                <div class="content">
+                    <h3>Wildlife Safaris</h3>
+                    <p>Explore Tanzania's world-famous parks, including Serengeti and Ngorongoro Crater, with expert guides.</p>
+                </div>
+            </div>
+
+            <!-- Mountain Climbing -->
+            <div class="offering-card">
+                <img src="kilimanjaro.jpg" alt="Mountain Climbing">
+                <div class="content">
+                    <h3>Mountain Climbing</h3>
+                    <p>Reach the summit of Mount Kilimanjaro and other incredible peaks with our experienced trekking guides.</p>
+                </div>
+            </div>
+
+            <!-- Cultural Tours -->
+            <div class="offering-card">
+                <img src="hadzabe2.jpg" alt="Cultural Tours">
+                <div class="content">
+                    <h3>Cultural Tours</h3>
+                    <p>Experience the traditions and customs of Tanzania's indigenous tribes with authentic cultural experiences.</p>
+                </div>
+            </div>
+
+            <!-- Beach Holidays -->
+            <div class="offering-card">
+                <img src="beach3.jpg" alt="Beach Holidays">
+                <div class="content">
+                    <h3>Beach Holidays</h3>
+                    <p>Relax on the pristine beaches of Zanzibar, with crystal-clear waters and vibrant marine life.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Excellence Section (Unchanged) -->
+        <div class="excellence-section">
+            <h2>Our Excellence</h2>
+            <div class="excellence-point">
+                <i class="material-icons">local_offer</i>
+                <h3>Affordable Packages</h3>
+                <p>We offer the best rates while maintaining the highest standards in quality service.</p>
+            </div>
+            <div class="excellence-point">
+                <i class="material-icons">thumb_up</i>
+                <h3>Expert Guides</h3>
+                <p>Our knowledgeable guides bring you closer to Tanzania’s wild side.</p>
+            </div>
+            <div class="excellence-point">
+                <i class="material-icons">business_center</i>
+                <h3>Tailored Experiences</h3>
+                <p>We offer custom safaris that are personalized to your unique preferences and interests.</p>
+            </div>
+        </div>
+
+        <!-- CEO Section -->
+        <div class="ceo-section">
+            <img src="mafoy2.jpg.png" alt="CEO of Mafoy Africa Safaris">
+            <h3>MAFOY AFRICA SAFARIS</h3>
+      
+        </div>
+
+        <p>
+            Our team is passionate about making your Tanzanian safari dream a reality. Join us for an experience that will last a lifetime!
+        </p>
+    </div>
+
+    
+
+    <style>
+        /* Modal container */
+        .unique-footer-modal {
+            display: none;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            width: 100%;
+            height: 130vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        /* Modal content */
+        .unique-footer-modal-content {
+            position: relative;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            margin: 0 auto;
+            padding: 40px;
+            max-width: 1200px;
+            width: 95%;
+            min-height: 80vh;
+            border-radius: 12px;
+            color: #333;
+            overflow-y: auto;
+            border: 3px solid #f39c12;
+            transition: all 0.3s ease-in-out;
+            z-index: 1050;
+            animation: modal-appear 0.3s ease-out;
+        }
+
+        /* Animation for modal appearance */
+        @keyframes modal-appear {
+            0% { opacity: 0; transform: scale(0.85); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .unique-footer-modal-content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Modal header */
+        .unique-footer-modal-header {
+            font-size: 3rem; /* Significantly increased font size */
+            color: #34495e;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s ease;
+        }
+
+        .unique-footer-modal-header:hover {
+            color: #f39c12;
+        }
+
+        /* Modal body */
+        .unique-footer-modal-body {
+            font-size: 1.8rem; /* Significantly increased font size */
+            line-height: 1.8;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        .unique-footer-modal-body:hover {
+            color: #2c3e50;
+        }
+
+        /* Close button */
+        .unique-footer-close-btn {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 50px; /* Significantly increased font size */
+            color: #e74c3c;
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .unique-footer-close-btn:hover {
+            color: #f39c12;
+            transform: rotate(180deg);
+        }
+
+        /* List styling */
+        .unique-footer-modal-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .unique-footer-modal-content ul li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 6px solid #f39c12;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            font-size: 1.5rem; /* Significantly increased font size */
+        }
+
+        .unique-footer-modal-content ul li:hover {
+            background-color: #f8f8f8;
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .unique-footer-modal-content ul li:first-child {
+            margin-top: 0;
+        }
+
+        .unique-footer-modal-content ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .unique-footer-modal-content {
+                margin: 20px;
+                width: calc(100% - 40px);
+                padding: 30px;
+            }
+
+            .unique-footer-modal-header {
+                font-size: 2.5rem; /* Adjusted for mobile */
+            }
+
+            .unique-footer-modal-body {
+                font-size: 1.5rem; /* Adjusted for mobile */
+            }
+
+            .unique-footer-close-btn {
+                font-size: 45px; /* Adjusted for mobile */
+            }
+
+            .unique-footer-modal-content ul li {
+                font-size: 1.3rem; /* Adjusted for mobile */
+            }
+        }
+    </style>
+
+<!-- Existing footer code -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <div class="footer-links">
+                <a href="#" onclick="openFooterModal('terms')">Terms and Conditions</a>
+                <a href="#" onclick="openFooterModal('privacy')">Privacy</a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h4>Travel Information</h4>
+            <div class="footer-links">
+                <a href="#" onclick="openFooterModal('weather')">Tanzania Weather</a>
+                <a href="#" onclick="openFooterModal('yellow-fever')">Yellow Fever Requirement</a>
+                <a href="#" onclick="openFooterModal('visit')">When to Visit</a>
+                <a href="#" onclick="openFooterModal('resources')">Travel Resources</a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Travel Guide</h3>
+            <div class="footer-links">
+                <a href="#" onclick="openFooterModal('faq')">Frequently Asked Questions</a>
+                <a href="#" onclick="openFooterModal('mountain-packing')">Mountain Packing List</a>
+                <a href="#" onclick="openFooterModal('safari-packing')">Packing List for Safaris</a>
+                <a href="#" onclick="openFooterModal('coding')">Safari Coding</a>
+                <a href="#" onclick="openFooterModal('things-to-do')">Things to Do</a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <div class="footer-links">
+                <p>Call and WhatsApp: <br>+255 692 208 654 <br></p>
+                <p>Email: info@mafoyafricasafaris.com</p>
+                <p>Email: mafoyafricasafaris@gmail.com </p>
+                <p>Address: Arusha, Tanzania</p>
+        
+                <a href="https://www.facebook.com/profile.php?id=61562231871069" target="_blank" style="color: #1877F2; text-decoration: none;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+                         alt="Facebook" width="20" height="20" style="vertical-align: middle;">
+                    Facebook
+                </a>
+                <br>
+                <a href="https://www.instagram.com/mafoy_africa_safaris/?hl=en" target="_blank" style="color: #E4405F; text-decoration: none;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" 
+                         alt="Instagram" width="20" height="20" style="vertical-align: middle;">
+                    Instagram
+                </a>
+            </div>
+        </div>
+        
+        
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <div class="footer-brand">
+                <p>Mafoy Africa Safaris. All Rights Reserved.</p>
+            </div>
+            <div class="footer-legal-links">
+                <a href="#">Privacy Policy</a>
+                <span class="separator">|</span>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Modal for footer -->
+<div id="uniqueFooterModal" class="unique-footer-modal">
+    <div class="unique-footer-modal-content">
+        <span class="unique-footer-close-btn" onclick="closeFooterModal()">&times;</span>
+        <div class="unique-footer-modal-header"></div>
+        <div class="unique-footer-modal-body"></div>
+    </div>
+</div>
+
+<script>
+    const footerModalContent = {
+        'terms': {
+            title: 'Terms and Conditions',
+            content: `
+        <h3>Payments and Refunds</h3>
+        <p>The agreed payment terms apply. Usually, a deposit payment is made when the reservation is done. The amount of the deposit depends on the type of safari and accommodation. In the case of Lodge Safaris, the deposit is 30% of the overall value. Payment of the deposit is due at reservation.</p>
+        <p>The remaining balance is to be paid before the tour starts, usually in cash. In case payment with a credit card is preferred, the customer has to add the handling fees that are charged to the Agency, normally 4% to 6% of the remaining balance.</p>
+        
+        <h3>Cancellation Policy</h3>
+        <ul>
+            <li>All bookings should be confirmed by payment as per the terms of your personal schedule.</li>
+            <li>Cancellation less than 72 hours prior to departure will be charged 100%.</li>
+            <li>Cancellation 72 hours to 7 days prior to departure will be charged 75%.</li>
+            <li>Cancellation 7 days to 21 days prior to departure will be charged 50%.</li>
+            <li>Cancellation 21 days or longer prior to departure incurs no cancellation fee.</li>
+        </ul>
+        <p>Cancellation can only be done by email to our email address.</p>
+        <p><strong>No Shows</strong> will be charged 100% (no show also includes showing up after the meeting time).</p>
+    `
+},
+        'privacy': {
+title: 'Privacy Policy',
+content: `<ul>
+            <li>We are committed to protecting your privacy and keeping your data secure.</li>
+            <li>Your personal information, such as name, email, and phone number, is used only for inquiries, quotations, and operational purposes.</li>
+            <li>We will not share your information with third parties for marketing without your consent.</li>
+            <li>Cookies are used to enhance your experience and track anonymous website activity. You can manage cookies through your browser settings.</li>
+            <li>Google Analytics helps us analyze site visits but does not collect personally identifiable information.</li>
+            <li>Links to external sites are provided for convenience, but we are not responsible for their privacy practices.</li>
+            <li>You can update your preferences or withdraw consent for marketing communications by contacting us at any time.</li>
+          </ul>`
+},
+'weather': {
+title: 'Tanzania Weather',
+content: `
+    <ul>
+        <li>Tanzania weather differs from region to region, but it’s always a great time to travel in Tanzania!</li>
+        <li>The coastal areas are the hottest and most humid, while the North and highlands are cooler due to altitude.</li>
+        <li>Temperatures typically range between 22°C and 31°C throughout the year.</li>
+        <li>During the night, temperatures can drop to between 10°C and 22°C.</li>
+        <li>Zanzibar, located close to the Equator, has a tropical climate with warmer temperatures.</li>
+        <li>Tanzania has two main seasons: the wet and the dry season.</li>
+        <li>The wet season runs from the end of October to December, and again from March to June. These are the 'short' and 'long rains'.</li>
+        <li>The dry season, which runs from June to October, is the best time for safaris, as the weather is dry and sunny.</li>
+        <li>During the rainy season, tropical rains usually occur in the late afternoon and continue through the night.</li>
+    </ul>
+`
+}
+,
+
+        'yellow-fever': {
+            title: 'Tanzania Yellow Fever Requirements',
+content: `
+    <ul>
+        <li>Proof of yellow fever vaccination is required <strong>only</strong> if you are traveling from a country with a risk of the virus.</li>
+        <li>Countries in Europe and the United States are not on the list of high-risk countries.</li>
+        <li>If transiting through a yellow fever high-risk country for <strong>12 hours or more</strong>, vaccination is mandatory.</li>
+        <li>We recommend consulting your doctor or a healthcare professional to confirm Tanzania vaccination requirements before traveling.</li>
+    </ul>
+`
+},
+        'visit': {
+            title: 'When to Visit Tanzania',
+content: `<ul>
+            <li>The best time to visit Tanzania depends on what you want to see, where you want to go, your budget, and your interests.</li>
+            <li>Every time of the year has its pros and cons, but here’s a guide to help you decide the best time for your Tanzanian adventure.</li>
+            <li>The best months are June to October and December to February. These months are ideal for wildlife sightings and the epic wildebeest migration.</li>
+            <li>June to October: Sunny skies, wildlife galore, and great game-viewing opportunities.</li>
+            <li>December to February: Lush green landscapes and adorable baby animals everywhere.</li>
+            <li>March, April, May, and November: A hidden gem for vibrant greenery, bird-watching, and fewer crowds.</li>
+            <li>Although these months might bring rain, they still offer a unique and peaceful safari experience.</li>
+          </ul>`
+},
+        'resources': {
+            title: 'Travel Resources',
+            content: `<ul>
+                        <li>Visa information: Ensure you have the necessary travel documents.</li>
+                        <li>Currency exchange: Use Tanzanian Shillings for transactions.</li>
+                        <li>Local guides: Hiring a local guide enhances your safari experience.</li>
+                      </ul>`
+        },
+        'faq': {
+            title: 'Tanzania Safari Frequently Asked Questions',
+content: `<ul>
+            <li><strong>When is the best time to go on the Tanzania safari?</strong> Tanzania Safari holidays are great all-year-round. The best time depends on the type of safari activity you choose, but the dry season from June to October is considered the best time for safaris.</li>
+            <li><strong>When is the best time to see the great wildebeest migration in Tanzania?</strong> The wildebeest migration typically takes place from June to July and January to February. During December to March, the migration congregates in large herds around Lake Ndutu in the Ngorongoro Conservation Area.</li>
+            <li><strong>What should I take on safari in Tanzania?</strong> It's important to pack comfortable clothing for various weather conditions. Recommended items include:
+                <ul>
+                    <li>Shorts</li>
+                    <li>T-shirts</li>
+                    <li>Rain jacket</li>
+                    <li>Warm sweater</li>
+                    <li>Hat</li>
+                    <li>Swimsuit & swimsuit cover-up</li>
+                    <li>Sunglasses</li>
+                    <li>Safari boots</li>
+                    <li>Sneakers</li>
+                    <li>First Aid kit</li>
+                    <li>Plasters and anti-bacterial medicines</li>
+                    <li>Binoculars for animal sighting</li>
+                </ul>
+            </li>
+            <li><strong>What does a Tanzania Safari cost?</strong> Safari costs depend on various factors such as duration, accommodation type, and the number of travelers. A budget safari starts from $200 per person per day, with standard safaris ranging from $300 to $400, and luxury packages from $500 to $700 per person per day.</li>
+          </ul>`
+},
+        'mountain-packing': {
+            title: 'Mountain Packing List',
+            content: `<ul>
+                        <li>Sturdy hiking boots</li>
+                        <li>Warm clothing for cold nights</li>
+                        <li>Waterproof jacket</li>
+                        <li>Headlamp with extra batteries</li>
+                      </ul>`
+        },
+        'safari-packing': {
+            title: 'Kilimanjaro Packing List',
+content: `
+    <h3>Kilimanjaro Packing List</h3>
+    <p>Climbing Mount Kilimanjaro requires proper preparation, and packing the right gear is crucial for a safe and comfortable experience. Here’s a comprehensive packing list to help you get ready:</p>
+    
+    <h4>Essential Gear:</h4>
+    <ul>
+        <li>4 pairs of thick trekking socks</li>
+        <li>3-4 thermal undergarments</li>
+        <li>4 thermal t-shirts</li>
+        <li>Underwear</li>
+        <li>2 thermal long-sleeved tops</li>
+        <li>Normal t-shirts</li>
+        <li>1 fleece sweater</li>
+        <li>1 ski-mask</li>
+        <li>1 balaclava</li>
+        <li>1 sun hat</li>
+        <li>1 pair of sunglasses (with UV protection)</li>
+        <li>1 pair of thin warm gloves</li>
+        <li>1 pair of thick warm gloves (for summit day)</li>
+        <li>1 pair of rain trousers/waterproof trousers</li>
+        <li>1 rain jacket</li>
+        <li>2 pairs of warm trousers</li>
+        <li>1 winter jacket (wind stopper summit)</li>
+    </ul>
+    
+    <h4>Daypack Essentials:</h4>
+    <ul>
+        <li>Waterproof clothes</li>
+        <li>3-litre water system or water bottle</li>
+        <li>Thermos flask</li>
+        <li>1 pair of hiking poles</li>
+        <li>1 pair of gaiters</li>
+        <li>1 sleeping bag (warm enough for -10°C to -15°C temperatures)</li>
+        <li>1 head torch + spare batteries</li>
+        <li>1 waterproof rack sack and 1 poncho</li>
+    </ul>
+
+    <h4>Top Tips for Kilimanjaro Packing:</h4>
+    <ul>
+        <li><strong>Reduce Costs by Hiring:</strong> Hire high-quality equipment rather than buying cheap versions.</li>
+        <li><strong>Two Bags:</strong> Use a duffel bag for the porters and a backpack for your daily gear.</li>
+        <li><strong>Porter Bag Limit:</strong> Kilimanjaro porters can carry only 15 kg of kit (including the weight of the bag).</li>
+        <li><strong>Leave Extra Luggage:</strong> Any extra luggage can be left in storage at your accommodation.</li>
+        <li><strong>Wear Trekking Clothes:</strong> Travel in your trekking clothes and boots, or pack them in your hand luggage.</li>
+        <li><strong>Layer Clothing:</strong> Prepare for fluctuating temperatures, from -15°C to 35°C (5°F to 95°F).</li>
+        <li><strong>Avoid Cotton:</strong> Use moisture-wicking fabrics like merino wool or synthetic materials.</li>
+        <li><strong>Waterproof Gear:</strong> Bring quality waterproof jackets, trousers, and bag covers.</li>
+        <li><strong>Comfortable Hiking Boots:</strong> Make sure your boots are well-worn and comfortable.</li>
+        <li><strong>Reusable Water Bottles:</strong> Disposable plastic bottles are not allowed. Bring reusable bottles or hydration packs.</li>
+        <li><strong>Solar Protection:</strong> Protect yourself from the sun with a hat, sunscreen, sunglasses, and SPF lip protection.</li>
+        <li><strong>Hygiene:</strong> Antibacterial gel and wipes are essential for personal hygiene.</li>
+        <li><strong>Snacks:</strong> Bring snacks for long hikes, especially for summit night.</li>
+    </ul>
+
+    <p>By packing carefully and following these tips, you’ll be prepared for the challenges of climbing Mount Kilimanjaro and have a rewarding experience.</p>
+`
+},
+        'coding': {
+            title: 'Safari Coding',
+            content: `<ul>
+                        <li>Shorts</li>
+<li>T-shirts</li>
+<li>Rain jacket</li>
+<li>Warm sweater</li>
+<li>Hat</li>
+<li>Swimsuit & swimsuit cover-up</li>
+<li>Sunglasses</li>
+<li>Safari boots</li>
+<li>Sneakers</li>
+<li>First Aid kit</li>
+<li>Plasters and anti-bacterial medicines</li>
+<li>Binoculars for animal sighting</li>`
+        },
+        'things-to-do': {
+            title: 'Things To Do In Tanzania',
+content: `
+    <h3>Things To Do In Tanzania</h3>
+    <p>Tanzania is a country full of wildlife safaris, pristine coastline, vast plains, world-class diving, and friendly locals! It’s a destination that promises unforgettable experiences. From safaris to cultural encounters, here’s a list of things you can’t miss:</p>
+    <ul>
+        <li><strong>Go on a Safari</strong> - Explore the famous Serengeti, Tarangire, and Ngorongoro National Parks, with Serengeti being a UNESCO World Heritage Site. Enjoy thrilling wildlife encounters, especially with predators.</li>
+        <li><strong>Conquer Mount Kilimanjaro</strong> - Take on the world’s highest free-standing mountain. The climb is challenging, but the experience is rewarding. Don’t forget to visit Mount Meru and Oldonyo Lengai.</li>
+        <li><strong>Witness the Great Migration</strong> - Witness the incredible migration of zebras, gazelles, and wildebeest across the Serengeti, a true spectacle of nature.</li>
+        <li><strong>Discover Magical Zanzibar</strong> - Visit Zanzibar’s pristine beaches and Swahili coast, perfect for diving, relaxation, and exploring the city’s Arabic-influenced architecture.</li>
+        <li><strong>Game Drives</strong> - Tanzania offers the best game drives, from the Serengeti to the Ngorongoro Crater, where you can spot the Big Five and enjoy the annual migration.</li>
+    </ul>
+    <p>In addition to these iconic activities, Tanzania also offers:</p>
+    <ul>
+        <li>Visit the Hadzabe tribe near Lake Eyasi</li>
+        <li>Explore Lake Natron and its Flamingo population</li>
+        <li>Meet local craftsmen such as jewelers, wood carvers, and potters</li>
+        <li>Visit a Maasai tribe and learn about their customs</li>
+        <li>Walk in a local village, experience local food and drinks like banana beer and wine</li>
+        <li>Take a bike tour around Lake Manyara</li>
+    </ul>
+    <p>Tanzania is a country that will leave you with a lifetime of memories. Whether you’re seeking adventure, relaxation, or cultural exploration, there’s something for everyone!</p>
+`
+},
+    };
+
+    function openFooterModal(id) {
+        const modal = document.getElementById('uniqueFooterModal');
+        const content = footerModalContent[id];
+        if (content) {
+            modal.querySelector('.unique-footer-modal-header').textContent = content.title;
+            modal.querySelector('.unique-footer-modal-body').innerHTML = content.content;
+            modal.style.display = 'block';
+        }
+    }
+
+    function closeFooterModal() {
+        document.getElementById('uniqueFooterModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        const modal = document.getElementById('uniqueFooterModal');
+        if (event.target === modal) {
+            closeFooterModal();
+        }
+    }
+</script>
+
+
+<style>
+    section{
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .footer {
+        background-color: #2C3E50;
+        color: white;
+        padding: 40px 0; /* Increased padding */
+        text-align: center;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 20px; /* Increased gap */
+        padding: 20px 0; /* Increased padding */
+    }
+
+    .footer-section {
+        flex: 1;
+        min-width: 250px; /* Adjusted min-width */
+        text-align: left;
+    }
+
+    /* Heading styles - preserved and enhanced */
+    .footer-section h3 {
+        font-size: 1.0rem; /* Increased font size */
+        margin-bottom: 20px; /* Increased margin */
+        color: #FF9900;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700; /* Bold font weight */
+    }
+    .footer-section h4 {
+        text-transform: uppercase;
+        margin-bottom: 20px; /* Increased margin */
+        color: #FF9900;
+      
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-links a, .footer-links p {
+        color: #ECF0F1;
+        text-decoration: none;
+        margin-bottom: 12px; /* Increased margin */
+        font-size: 1.1rem; /* Increased font size */
+        transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: #FF9900;
+        text-decoration: underline;
+    }
+
+    .footer-bottom {
+        margin-top: 30px; /* Increased margin */
+        padding: 20px 0; /* Increased padding */
+        background-color: #2C3E50;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-bottom-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px; /* Adjusted padding */
+    }
+
+    .footer-legal-links a {
+        color: #ECF0F1;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        margin: 0 12px; /* Increased margin */
+        font-size: 1rem; /* Increased font size */
+    }
+
+    .footer-legal-links a:hover {
+        color: #FF9900;
+    }
+
+    .separator {
+        margin: 0 12px; /* Increased margin */
+        color: rgba(255,255,255,0.3);
+    }
+
+    .footer-brand p {
+        color: #ECF0F1;
+        font-weight: 600;
+        margin: 0;
+        letter-spacing: 1px;
+        font-size: 1rem; /* Increased font size */
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 20px; /* Adjusted padding */
+        }
+
+        .footer-section {
+            text-align: left;
+            width: 100%;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem; /* Adjusted font size for mobile */
+        }
+
+        .footer-links a, .footer-links p {
+            font-size: 1rem; /* Adjusted font size for mobile */
+        }
+
+        .footer-legal-links a {
+            font-size: 0.9rem; /* Adjusted font size for mobile */
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem; /* Adjusted font size for mobile */
+        }
+    }
+</style>
+<!-- Google Translate Script -->
+</body>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</html>
+
