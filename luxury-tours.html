@@ -267,45 +267,6 @@ header {
         display: block;
     }
 }
-
-
-
-/* Google Translate */
-body {
-    margin: 0;
-    padding: 20px; /* Added for visibility */
-}
-
-/* Make sure button is visible */
-#translateBtn {
-    background-color: #4285f4 !important;
-    color: white !important;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 4px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    cursor: pointer;
-    display: inline-flex !important; /* Force display */
-    align-items: center;
-    position: relative; /* Ensure z-index works */
-    z-index: 9999; /* Keep above other elements */
-}
-
-/* Google Translate Element Hiding */
-.goog-te-banner-frame {
-    display: none !important;
-}
-
-.goog-te-combo {
-    opacity: 0; /* Hide original dropdown */
-    position: absolute;
-    left: -9999px;
-}
-
-/* Load Roboto Font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
-
     </style>
 </head>
 <body>
@@ -318,15 +279,65 @@ body {
         </div>
 
         
-        <!-- Google Translate -->
-        <button id="translateBtn">
-            <span style="margin-right: 8px">🌐</span> <!-- Fallback emoji -->
-            Translate
-        </button>
-    
-        <!-- Google Translate Container -->
-        <div id="google_translate_element"></div>
-    
+        <style>
+            /* Google Translate Styles */
+            #translateBtn {
+                background-color: #4285f4;
+                color: white;
+                padding: 12px 24px;
+                border: none;
+                border-radius: 4px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 14px;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                position: relative;
+                z-index: 9999;
+                margin: 10px 0;
+            }
+        
+            .goog-te-banner-frame {
+                display: none !important;
+            }
+        
+            /* Hide Google's original dropdown on desktop */
+            .goog-te-combo {
+                opacity: 0;
+                position: absolute;
+                left: -9999px;
+            }
+        
+            /* Mobile Responsive Styles */
+            @media (max-width: 768px) {
+                #translateBtn {
+                    display: none !important;
+                }
+                
+                .goog-te-combo {
+                    opacity: 1 !important;
+                    position: relative !important;
+                    left: 0 !important;
+                    width: 100%;
+                    max-width: 200px;
+                    height: 40px;
+                    font-size: 16px;
+                }
+            }
+        
+            /* Load Roboto Font */
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+        </style>
+        
+        <!-- Google Translate Elements -->
+        <div class="translate-wrapper">
+            <button id="translateBtn">
+                <span style="margin-right: 8px">🌐</span>
+                Translate
+            </button>
+            <div id="google_translate_element"></div>
+        </div>
+        
         <script>
             function googleTranslateElementInit() {
                 new google.translate.TranslateElement({
@@ -334,16 +345,18 @@ body {
                     includedLanguages: 'en,sw,fr,es,de,it,pt,ru,zh-CN,ja',
                     layout: google.translate.TranslateElement.InlineLayout.SIMPLE
                 }, 'google_translate_element');
-    
-                // Click handler with error checking
-                const translateButton = document.getElementById('translateBtn');
-                if (translateButton) {
-                    translateButton.addEventListener('click', () => {
-                        const googleDropdown = document.querySelector('.goog-te-combo');
-                        if (googleDropdown) {
-                            googleDropdown.dispatchEvent(new Event('mousedown'));
-                        }
-                    });
+        
+                // Only add click handler for desktop
+                if (window.innerWidth > 768) {
+                    const translateButton = document.getElementById('translateBtn');
+                    if (translateButton) {
+                        translateButton.addEventListener('click', () => {
+                            const googleDropdown = document.querySelector('.goog-te-combo');
+                            if (googleDropdown) {
+                                googleDropdown.dispatchEvent(new Event('mousedown'));
+                            }
+                        });
+                    }
                 }
             }
         </script>
